@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Elevate Careers</string>
+    <string name="search_jobs">Search jobs</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="remote">Remote</string>
+    <string name="full_time">Full-time</string>
+    <string name="part_time">Part-time</string>
+    <string name="contract">Contract</string>
+    <string name="internship">Internship</string>
+    <string name="about_the_job">About the job</string>
+    <string name="skills">Skills</string>
+    <string name="no_jobs_found">No jobs found</string>
+    <string name="loading">Loading...</string>
+    <string name="retry">Retry</string>
+    <string name="google_web_client_id">626322740351-t5qsn5q9hc9ad47feh37oahlrpke2p8f.apps.googleusercontent.com</string>
+    <string name="linkedin_client_id">86fdw92kq8r7hg</string>
+</resources>

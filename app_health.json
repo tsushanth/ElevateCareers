@@ -1,0 +1,33 @@
+{
+  "app_name": "ElevateCareers",
+  "bundle_id": "com.kreativekoala.elevatecareers",
+  "platform": "android",
+  "health_score": 0,
+  "health_tier": "unknown",
+  "marketing_readiness": 0,
+  "last_updated": "2026-03-05",
+  "metrics": {
+    "impressions_7d": 0,
+    "units_7d": 0,
+    "revenue_7d": 0,
+    "sessions_7d": 0,
+    "ad_spend_7d": 0,
+    "active_subscribers": 0,
+    "roas": 0,
+    "rating": 0,
+    "rating_count": 0
+  },
+  "suggested_actions": {
+    "coding": [
+      "Integrate Analytics SDK",
+      "Develop Content Library",
+      "Add RevenueCat",
+      "Add Firebase Analytics",
+      "Add Facebook SDK"
+    ],
+    "marketing": [
+      "Launch Social Media Campaign",
+      "Improve App Store Listing"
+    ]
+  }
+}

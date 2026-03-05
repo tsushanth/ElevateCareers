@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "626322740351",
+    "project_id": "elevatecareers-b50b7",
+    "storage_bucket": "elevatecareers-b50b7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626322740351:android:0a9b04ebf98d5adebfdb4a",
+        "android_client_info": {
+          "package_name": "com.kreativekoala.elevatecareers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626322740351-lfrsvjkbvbpqts8rbat26tb0um8r6bed.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kreativekoala.elevatecareers",
+            "certificate_hash": "c9a64a89d64b6dcdd8d05f5bd0d4bb8ac649d41b"
+          }
+        },
+        {
+          "client_id": "626322740351-mgp9g99g80ss8ndetnjbbt4n7nu303u7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kreativekoala.elevatecareers",
+            "certificate_hash": "1d3f246ed32a7a8c2d02c15f1c908fc9e66fd200"
+          }
+        },
+        {
+          "client_id": "626322740351-t5qsn5q9hc9ad47feh37oahlrpke2p8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5hgORDJmVGRzfuBGmcJfFWBZU1aCwFQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626322740351-t5qsn5q9hc9ad47feh37oahlrpke2p8f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "626322740351-acd2q7h1oth80rraf48p5cfi47os65h7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kreativekoala.elevatecareers",
+                "app_store_id": "6754466260"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
