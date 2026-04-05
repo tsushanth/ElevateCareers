@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Elevate Careers</string>
+
+    <!-- Common / Shared -->
+    <string name="back">Retour</string>
+    <string name="cancel">Annuler</string>
+    <string name="retry">R\u00E9essayer</string>
+    <string name="close">Fermer</string>
+    <string name="search">Rechercher</string>
+    <string name="email">E-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="confirm_password">Confirmer le mot de passe</string>
+    <string name="loading">Chargement\u2026</string>
+    <string name="dismiss">Ignorer</string>
+    <string name="save">Enregistrer</string>
+    <string name="apply">Postuler</string>
+    <string name="edit">Modifier</string>
+    <string name="delete">Supprimer</string>
+    <string name="share">Partager</string>
+    <string name="view">Voir</string>
+    <string name="download">T\u00E9l\u00E9charger</string>
+    <string name="next">Suivant</string>
+    <string name="done">Termin\u00E9</string>
+    <string name="send">Envoyer</string>
+    <string name="refresh">Actualiser</string>
+    <string name="stop">Arr\u00EAter</string>
+    <string name="start">D\u00E9marrer</string>
+    <string name="continue_text">Continuer</string>
+    <string name="skills">Comp\u00E9tences</string>
+    <string name="remote">\u00C0 distance</string>
+
+    <!-- Sign In Screen -->
+    <string name="elevate_careers_title">ElevateCareers</string>
+    <string name="sign_in_to_continue">Connectez-vous pour continuer</string>
+    <string name="complete_linkedin_login_browser">Compl\u00E9tez la connexion LinkedIn dans votre navigateur</string>
+    <string name="google_sign_in_failed">\u00C9chec de la connexion Google : %s</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="dont_have_account">Vous n\'avez pas de compte ? </string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="continue_without_signing_in">Continuer sans se connecter</string>
+    <string name="or">ou</string>
+    <string name="hide_password">Masquer le mot de passe</string>
+    <string name="show_password">Afficher le mot de passe</string>
+    <string name="continue_with_google">Continuer avec Google</string>
+    <string name="google">Google</string>
+    <string name="continue_with_linkedin">Continuer avec LinkedIn</string>
+    <string name="linkedin">LinkedIn</string>
+
+    <!-- Sign Up Screen -->
+    <string name="create_your_account">Cr\u00E9ez votre compte</string>
+    <string name="join_elevatecareers">Rejoignez ElevateCareers pour trouver votre prochaine opportunit\u00E9</string>
+    <string name="at_least_6_characters">Au moins 6 caract\u00E8res</string>
+    <string name="passwords_dont_match">Les mots de passe ne correspondent pas</string>
+    <string name="create_account">Cr\u00E9er un compte</string>
+    <string name="already_have_account">Vous avez d\u00E9j\u00E0 un compte ? </string>
+
+    <!-- Auth ViewModel errors -->
+    <string name="google_sign_in_failed_generic">\u00C9chec de la connexion Google</string>
+    <string name="linkedin_email_required">L\'e-mail LinkedIn est requis</string>
+    <string name="linkedin_sign_in_failed">\u00C9chec de la connexion LinkedIn : %s</string>
+    <string name="sign_in_failed">\u00C9chec de la connexion</string>
+    <string name="sign_up_failed">\u00C9chec de l\'inscription</string>
+    <string name="delete_account_failed">\u00C9chec de la suppression du compte</string>
+
+    <!-- MainActivity -->
+    <string name="linkedin_connected">LinkedIn connect\u00E9 : %s</string>
+    <string name="linkedin_email_required_error">L\'e-mail LinkedIn est requis</string>
+    <string name="failed_fetch_profile">\u00C9chec de la r\u00E9cup\u00E9ration du profil : %s</string>
+    <string name="linkedin_login_failed">\u00C9chec de la connexion LinkedIn : %s</string>
+    <string name="error_generic">Erreur : %s</string>
+    <string name="no_authorization_code">Aucun code d\'autorisation re\u00E7u</string>
+    <string name="upload_resume_coming_soon">T\u00E9l\u00E9charger le CV - Bient\u00F4t disponible</string>
+    <string name="manual_entry_coming_soon">Saisie manuelle - Bient\u00F4t disponible</string>
+
+    <!-- Job List Screen -->
+    <string name="jobs_title">Emplois</string>
+    <string name="close_search">Fermer la recherche</string>
+    <string name="settings">Param\u00E8tres</string>
+    <string name="search_jobs_placeholder">Rechercher des emplois par titre, entreprise ou lieu</string>
+    <string name="clear">Effacer</string>
+    <string name="full_time">Temps plein</string>
+    <string name="part_time">Temps partiel</string>
+    <string name="contract">Contrat</string>
+    <string name="internship">Stage</string>
+    <string name="jobs_count">%d emplois</string>
+    <string name="an_error_occurred">Une erreur est survenue</string>
+    <string name="no_jobs_found">Aucun emploi trouv\u00E9</string>
+    <string name="try_adjusting_search">Essayez d\'ajuster votre recherche ou vos filtres</string>
+    <string name="clear_filters">Effacer les filtres</string>
+    <string name="promoted">Promu</string>
+    <string name="company_logo">Logo de %s</string>
+
+    <!-- Job Detail Screen -->
+    <string name="about_the_job">\u00C0 propos de l\'emploi</string>
+    <string name="people_clicked_apply">%1$s \u00B7 %2$s \u00B7 67 personnes ont cliqu\u00E9 sur postuler</string>
+    <string name="promoted_by_hirer">Promu par l\'employeur \u00B7 R\u00E9ponses g\u00E9r\u00E9es hors LinkedIn</string>
+    <string name="remote_check">\u2713 \u00C0 distance</string>
+    <string name="type_check">\u2713 %s</string>
+    <string name="location_not_specified">Lieu non sp\u00E9cifi\u00E9</string>
+
+    <!-- Job Model time strings -->
+    <string name="recently_posted">Publi\u00E9 r\u00E9cemment</string>
+    <string name="posted_today">Publi\u00E9 aujourd\'hui</string>
+    <string name="posted_1_day_ago">Publi\u00E9 il y a 1 jour</string>
+    <string name="posted_days_ago">Publi\u00E9 il y a %d jours</string>
+    <string name="posted_1_week_ago">Publi\u00E9 il y a 1 semaine</string>
+    <string name="posted_weeks_ago">Publi\u00E9 il y a %d semaines</string>
+    <string name="posted_months_ago">Publi\u00E9 il y a %d mois</string>
+
+    <!-- Job Application Screen -->
+    <string name="failed_load_autofill">\u00C9chec du chargement des donn\u00E9es de remplissage automatique</string>
+    <string name="auto_filling_application">Remplissage automatique en cours\u2026</string>
+    <string name="fill_with_voice">Remplir par la voix (%d)</string>
+    <string name="voice">Voix</string>
+
+    <!-- Voice Input Dialog -->
+    <string name="fill_with_voice_title">Remplir par la voix</string>
+    <string name="field_x_of_y">Champ %1$d sur %2$d</string>
+    <string name="what_is_your">Quel est votre :</string>
+    <string name="listening">\u00C9coute en cours\u2026</string>
+    <string name="you_said">Vous avez dit :</string>
+    <string name="microphone_permission_required">Autorisation du microphone requise</string>
+    <string name="voice_error_audio">Erreur audio</string>
+    <string name="voice_error_client">Erreur client</string>
+    <string name="voice_error_permission">Autorisation refus\u00E9e</string>
+    <string name="voice_error_network">Erreur r\u00E9seau</string>
+    <string name="voice_error_network_timeout">D\u00E9lai d\'attente r\u00E9seau d\u00E9pass\u00E9</string>
+    <string name="voice_error_no_match">Aucune voix d\u00E9tect\u00E9e</string>
+    <string name="voice_error_recognizer_busy">Reconnaissance occup\u00E9e</string>
+    <string name="voice_error_server">Erreur serveur</string>
+    <string name="voice_error_speech_timeout">Aucune saisie vocale</string>
+    <string name="voice_error_unknown">Erreur inconnue</string>
+    <string name="voice_input">Saisie vocale</string>
+
+    <!-- Onboarding Screen -->
+    <string name="welcome_to_elevatecareers">Bienvenue sur ElevateCareers</string>
+    <string name="get_set_up_dream_job">Pr\u00E9parons-nous \u00E0 trouver l\'emploi de vos r\u00EAves</string>
+    <string name="get_started">Commencer</string>
+    <string name="skip_setup">Passer la configuration</string>
+    <string name="connect_linkedin">Connecter LinkedIn</string>
+    <string name="auto_fill_linkedin_info">Nous remplirons automatiquement votre profil avec vos informations LinkedIn</string>
+    <string name="connected_as">Connect\u00E9 en tant que %s</string>
+    <string name="skip_for_now">Passer pour le moment</string>
+    <string name="upload_your_resume">T\u00E9l\u00E9chargez votre CV</string>
+    <string name="auto_extract_skills">Nous extrairons automatiquement vos comp\u00E9tences et votre exp\u00E9rience</string>
+    <string name="resume_uploaded_excl">CV t\u00E9l\u00E9charg\u00E9 !</string>
+    <string name="change_resume">Changer de CV</string>
+    <string name="complete_setup">Terminer la configuration</string>
+    <string name="continue_with_resume">Continuer avec ce CV</string>
+    <string name="uploading">T\u00E9l\u00E9chargement\u2026</string>
+    <string name="choose_resume">Choisir un CV</string>
+    <string name="upload_later_from_settings">Vous pouvez toujours t\u00E9l\u00E9charger votre CV plus tard depuis les Param\u00E8tres</string>
+    <string name="create_or_upload_resume">Cr\u00E9er ou t\u00E9l\u00E9charger un CV</string>
+    <string name="how_add_resume">Comment souhaitez-vous ajouter votre CV ?</string>
+    <string name="build_with_ai_voice">Cr\u00E9er avec la voix IA</string>
+    <string name="new_badge">NOUVEAU</string>
+    <string name="chat_with_ai_create_resume">Discutez avec l\'IA pour cr\u00E9er votre CV</string>
+    <string name="upload_from_cloud">T\u00E9l\u00E9charger depuis le cloud</string>
+    <string name="google_drive_dropbox">Google Drive, Dropbox, etc.</string>
+    <string name="device_storage">Stockage de l\'appareil</string>
+    <string name="browse_local_files">Parcourir les fichiers locaux</string>
+    <string name="resume_uploaded_success">CV t\u00E9l\u00E9charg\u00E9 avec succ\u00E8s !</string>
+    <string name="failed_to_upload">\u00C9chec du t\u00E9l\u00E9chargement : %s</string>
+    <string name="no_file_selected">Aucun fichier s\u00E9lectionn\u00E9</string>
+    <string name="resume_uploaded_filename">CV t\u00E9l\u00E9charg\u00E9 : %s</string>
+    <string name="file_selection_cancelled">S\u00E9lection de fichier annul\u00E9e</string>
+
+    <!-- Profile Screen -->
+    <string name="profile">Profil</string>
+    <string name="no_name">Sans nom</string>
+    <string name="resume">CV</string>
+    <string name="uploaded_date">T\u00E9l\u00E9charg\u00E9 le %s</string>
+    <string name="view_resume">Voir le CV</string>
+    <string name="delete_resume">Supprimer le CV</string>
+    <string name="upload_resume">T\u00E9l\u00E9charger un CV</string>
+    <string name="edit_profile">Modifier le profil</string>
+    <string name="import_from_linkedin">Importer de LinkedIn</string>
+    <string name="work_experience">Exp\u00E9rience professionnelle</string>
+    <string name="education">\u00C9ducation</string>
+    <string name="degree_fallback">Dipl\u00F4me</string>
+    <string name="job_preferences">Pr\u00E9f\u00E9rences d\'emploi</string>
+    <string name="desired_roles">R\u00F4les souhait\u00E9s</string>
+    <string name="remote_preference">Pr\u00E9f\u00E9rence \u00E0 distance</string>
+    <string name="minimum_salary">Salaire minimum</string>
+
+    <!-- Profile ViewModel messages -->
+    <string name="not_authenticated">Non authentifi\u00E9</string>
+    <string name="failed_load_profile">\u00C9chec du chargement du profil</string>
+    <string name="failed_to_upload_msg">\u00C9chec du t\u00E9l\u00E9chargement : %s</string>
+    <string name="failed_to_parse">\u00C9chec de l\'analyse : %s</string>
+    <string name="resume_uploaded_skills_exp">CV t\u00E9l\u00E9charg\u00E9 ! %1$d comp\u00E9tences et %2$d exp\u00E9riences trouv\u00E9es.</string>
+    <string name="upload_failed">\u00C9chec du t\u00E9l\u00E9chargement : %s</string>
+    <string name="resume_deleted_successfully">CV supprim\u00E9 avec succ\u00E8s</string>
+    <string name="failed_to_delete">\u00C9chec de la suppression : %s</string>
+    <string name="profile_updated_successfully">Profil mis \u00E0 jour avec succ\u00E8s</string>
+    <string name="failed_to_update">\u00C9chec de la mise \u00E0 jour : %s</string>
+    <string name="linkedin_imported_successfully">Profil LinkedIn import\u00E9 avec succ\u00E8s !</string>
+    <string name="failed_to_import">\u00C9chec de l\'importation : %s</string>
+
+    <!-- Settings Screen -->
+    <string name="account">Compte</string>
+    <string name="app_section">Application</string>
+    <string name="notifications">Notifications</string>
+    <string name="manage_notification_preferences">G\u00E9rer les pr\u00E9f\u00E9rences de notification</string>
+    <string name="privacy_security">Confidentialit\u00E9 et s\u00E9curit\u00E9</string>
+    <string name="control_data_privacy">Contr\u00F4lez vos donn\u00E9es et votre confidentialit\u00E9</string>
+    <string name="about">\u00C0 propos</string>
+    <string name="version_info">Version 1.0.0</string>
+    <string name="account_actions">Actions du compte</string>
+    <string name="sign_out">Se d\u00E9connecter</string>
+    <string name="delete_account">Supprimer le compte</string>
+    <string name="permanently_delete_account">Supprimer d\u00E9finitivement votre compte et vos donn\u00E9es</string>
+    <string name="linkedin_profile">Profil LinkedIn</string>
+    <string name="connected">Connect\u00E9</string>
+    <string name="sign_out_confirmation">\u00CAtes-vous s\u00FBr de vouloir vous d\u00E9connecter ?</string>
+    <string name="delete_account_confirmation">\u00CAtes-vous s\u00FBr de vouloir supprimer votre compte ?</string>
+    <string name="delete_account_warning">Cette action est irr\u00E9versible. Toutes vos donn\u00E9es seront d\u00E9finitivement supprim\u00E9es.</string>
+
+    <!-- AI Resume Builder Screen -->
+    <string name="ai_resume_builder">Cr\u00E9ateur de CV IA</string>
+    <string name="percent_complete">%d%% termin\u00E9</string>
+    <string name="start_over">Recommencer</string>
+    <string name="share_resume">Partager le CV</string>
+    <string name="resume_ready">CV pr\u00EAt !</string>
+    <string name="download_pdf">T\u00E9l\u00E9charger le PDF</string>
+    <string name="generating_resume">G\u00E9n\u00E9ration de votre CV\u2026</string>
+    <string name="please_wait_pdf">Veuillez patienter pendant que nous cr\u00E9ons votre PDF\u2026</string>
+    <string name="resume_complete">CV termin\u00E9 !</string>
+    <string name="your_resume_ready">Votre CV professionnel est pr\u00EAt</string>
+    <string name="resume_summary">R\u00E9sum\u00E9 du CV</string>
+    <string name="pdf_generated_saved">PDF g\u00E9n\u00E9r\u00E9 et enregistr\u00E9 dans votre compte</string>
+    <string name="name_label">Nom</string>
+    <string name="email_label">E-mail</string>
+    <string name="education_label">\u00C9ducation</string>
+    <string name="experience_label">Exp\u00E9rience</string>
+    <string name="skills_label">Comp\u00E9tences</string>
+    <string name="entry_count">%d entr\u00E9e</string>
+    <string name="skills_count">%d comp\u00E9tences</string>
+    <string name="resume_completed_placeholder">CV termin\u00E9 !</string>
+    <string name="type_your_response">Tapez votre r\u00E9ponse\u2026</string>
+
+    <!-- Resume Options Screen -->
+    <string name="create_your_resume">Cr\u00E9ez votre CV</string>
+    <string name="how_create_resume">Comment souhaitez-vous cr\u00E9er votre CV ?</string>
+    <string name="choose_method">Choisissez la m\u00E9thode qui vous convient le mieux</string>
+    <string name="build_with_ai_voice_desc">Discutez avec notre assistant IA. Parlez naturellement et nous cr\u00E9erons votre CV.</string>
+    <string name="recommended">RECOMMAND\u00C9</string>
+    <string name="upload_existing_resume">T\u00E9l\u00E9charger un CV existant</string>
+    <string name="upload_existing_resume_desc">Vous avez d\u00E9j\u00E0 un CV ? T\u00E9l\u00E9chargez-le et nous l\'analyserons et l\'am\u00E9liorerons.</string>
+    <string name="enter_manually">Saisie manuelle</string>
+    <string name="enter_manually_desc">Remplissez un formulaire traditionnel pour cr\u00E9er votre CV de z\u00E9ro.</string>
+
+    <!-- Resume Preview Screen -->
+    <string name="resume_preview">Aper\u00E7u du CV</string>
+    <string name="personal_information">Informations personnelles</string>
+    <string name="graduated">Dipl\u00F4m\u00E9 : %s</string>
+
+    <!-- Custom File Picker -->
+    <string name="select_resume">S\u00E9lectionner un CV</string>
+    <string name="up_one_level">Remonter d\'un niveau</string>
+    <string name="no_pdf_files_found">Aucun fichier PDF trouv\u00E9</string>
+    <string name="open_folder">Ouvrir le dossier</string>
+
+    <!-- ViewModel messages -->
+    <string name="failed_to_load_jobs">\u00C9chec du chargement des emplois</string>
+    <string name="failed_to_load_data">\u00C9chec du chargement des donn\u00E9es</string>
+    <string name="no_active_conversation">Aucune conversation active. Veuillez red\u00E9marrer.</string>
+    <string name="conversation_expired">Conversation expir\u00E9e. Veuillez d\u00E9marrer une nouvelle conversation.</string>
+    <string name="failed_start_conversation">\u00C9chec du d\u00E9marrage de la conversation</string>
+    <string name="failed_send_message">\u00C9chec de l\'envoi du message</string>
+    <string name="speech_recognition_error">Erreur de reconnaissance vocale : %d</string>
+    <string name="tell_me_about_yourself">Parlez-moi de vous\u2026</string>
+</resources>

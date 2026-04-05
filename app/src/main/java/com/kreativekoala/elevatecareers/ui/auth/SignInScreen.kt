@@ -14,6 +14,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
@@ -45,7 +46,7 @@ fun SignInScreen(
     ) { result ->
         Toast.makeText(
             context,
-            "Complete LinkedIn login in your browser",
+            context.getString(R.string.complete_linkedin_login_browser),
             Toast.LENGTH_SHORT
         ).show()
     }
@@ -61,7 +62,7 @@ fun SignInScreen(
                 viewModel.signInWithGoogle(idToken)
             }
         } catch (e: ApiException) {
-            viewModel.setError("Google Sign-In failed: ${e.message}")
+            viewModel.setError(context.getString(R.string.google_sign_in_failed, e.message ?: ""))
         }
     }
 
@@ -83,13 +84,13 @@ fun SignInScreen(
         Spacer(modifier = Modifier.height(32.dp))
 
         Text(
-            text = "ElevateCareers",
+            text = stringResource(R.string.elevate_careers_title),
             style = MaterialTheme.typography.headlineLarge,
             fontWeight = FontWeight.Bold
         )
 
         Text(
-            text = "Sign in to continue",
+            text = stringResource(R.string.sign_in_to_continue),
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -128,7 +129,7 @@ fun SignInScreen(
         ) {
             HorizontalDivider(modifier = Modifier.weight(1f))
             Text(
-                text = "or",
+                text = stringResource(R.string.or),
                 modifier = Modifier.padding(horizontal = 16.dp),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -140,7 +141,7 @@ fun SignInScreen(
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
-            label = { Text("Email") },
+            label = { Text(stringResource(R.string.email)) },
             leadingIcon = {
                 Icon(Icons.Default.Email, contentDescription = null)
             },
@@ -152,7 +153,7 @@ fun SignInScreen(
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
-            label = { Text("Password") },
+            label = { Text(stringResource(R.string.password)) },
             leadingIcon = {
                 Icon(Icons.Default.Lock, contentDescription = null)
             },
@@ -160,7 +161,7 @@ fun SignInScreen(
                 IconButton(onClick = { passwordVisible = !passwordVisible }) {
                     Icon(
                         imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
-                        contentDescription = if (passwordVisible) "Hide password" else "Show password"
+                        contentDescription = if (passwordVisible) stringResource(R.string.hide_password) else stringResource(R.string.show_password)
                     )
                 }
             },
@@ -198,7 +199,7 @@ fun SignInScreen(
                     color = MaterialTheme.colorScheme.onPrimary
                 )
             } else {
-                Text("Sign In")
+                Text(stringResource(R.string.sign_in))
             }
         }
 
@@ -208,11 +209,11 @@ fun SignInScreen(
             horizontalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Don't have an account? ",
+                text = stringResource(R.string.dont_have_account),
                 style = MaterialTheme.typography.bodyMedium
             )
             TextButton(onClick = onNavigateToSignUp) {
-                Text("Sign Up")
+                Text(stringResource(R.string.sign_up))
             }
         }
 
@@ -225,7 +226,7 @@ fun SignInScreen(
                 onProceedWithoutSignIn()
             }
         ) {
-            Text("Continue without signing in")
+            Text(stringResource(R.string.continue_without_signing_in))
         }
     }
 }
@@ -244,11 +245,11 @@ fun GoogleSignInButton(
     ) {
         Icon(
             imageVector = Icons.Default.AccountCircle, // Replace with Google icon
-            contentDescription = "Google",
+            contentDescription = stringResource(R.string.google),
             modifier = Modifier.size(20.dp)
         )
         Spacer(modifier = Modifier.width(12.dp))
-        Text("Continue with Google")
+        Text(stringResource(R.string.continue_with_google))
     }
 }
 
@@ -266,10 +267,10 @@ fun LinkedInSignInButton(
     ) {
         Icon(
             imageVector = Icons.Default.AccountCircle, // Replace with LinkedIn icon
-            contentDescription = "LinkedIn",
+            contentDescription = stringResource(R.string.linkedin),
             modifier = Modifier.size(20.dp)
         )
         Spacer(modifier = Modifier.width(12.dp))
-        Text("Continue with LinkedIn")
+        Text(stringResource(R.string.continue_with_linkedin))
     }
 }

@@ -1,19 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Elevate Careers</string>
-    <string name="search_jobs">Search jobs</string>
-    <string name="apply">Apply</string>
+    <string name="google_web_client_id">626322740351-t5qsn5q9hc9ad47feh37oahlrpke2p8f.apps.googleusercontent.com</string>
+    <string name="linkedin_client_id">86fdw92kq8r7hg</string>
+
+    <!-- Common / Shared -->
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="retry">Retry</string>
+    <string name="close">Close</string>
+    <string name="search">Search</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="loading">Loading…</string>
+    <string name="dismiss">Dismiss</string>
     <string name="save">Save</string>
+    <string name="apply">Apply</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="view">View</string>
+    <string name="download">Download</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    <string name="send">Send</string>
+    <string name="refresh">Refresh</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="continue_text">Continue</string>
+    <string name="skills">Skills</string>
     <string name="remote">Remote</string>
+
+    <!-- Sign In Screen -->
+    <string name="elevate_careers_title">ElevateCareers</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="complete_linkedin_login_browser">Complete LinkedIn login in your browser</string>
+    <string name="google_sign_in_failed">Google Sign-In failed: %s</string>
+    <string name="sign_in">Sign In</string>
+    <string name="dont_have_account">Don\'t have an account? </string>
+    <string name="sign_up">Sign Up</string>
+    <string name="continue_without_signing_in">Continue without signing in</string>
+    <string name="or">or</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_password">Show password</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="google">Google</string>
+    <string name="continue_with_linkedin">Continue with LinkedIn</string>
+    <string name="linkedin">LinkedIn</string>
+
+    <!-- Sign Up Screen -->
+    <string name="create_your_account">Create your account</string>
+    <string name="join_elevatecareers">Join ElevateCareers to find your next opportunity</string>
+    <string name="at_least_6_characters">At least 6 characters</string>
+    <string name="passwords_dont_match">Passwords don\'t match</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_have_account">Already have an account? </string>
+
+    <!-- Auth ViewModel errors -->
+    <string name="google_sign_in_failed_generic">Google sign in failed</string>
+    <string name="linkedin_email_required">LinkedIn email is required</string>
+    <string name="linkedin_sign_in_failed">LinkedIn sign in failed: %s</string>
+    <string name="sign_in_failed">Sign in failed</string>
+    <string name="sign_up_failed">Sign up failed</string>
+    <string name="delete_account_failed">Delete account failed</string>
+
+    <!-- MainActivity / LinkedIn Callback -->
+    <string name="linkedin_connected">LinkedIn connected: %s</string>
+    <string name="linkedin_email_required_error">LinkedIn email is required</string>
+    <string name="failed_fetch_profile">Failed to fetch profile: %s</string>
+    <string name="linkedin_login_failed">LinkedIn login failed: %s</string>
+    <string name="error_generic">Error: %s</string>
+    <string name="no_authorization_code">No authorization code received</string>
+    <string name="upload_resume_coming_soon">Upload Resume - Coming Soon</string>
+    <string name="manual_entry_coming_soon">Manual Entry - Coming Soon</string>
+
+    <!-- Job List Screen -->
+    <string name="jobs_title">Jobs</string>
+    <string name="close_search">Close search</string>
+    <string name="settings">Settings</string>
+    <string name="search_jobs_placeholder">Search jobs by title, company, or location</string>
+    <string name="clear">Clear</string>
     <string name="full_time">Full-time</string>
     <string name="part_time">Part-time</string>
     <string name="contract">Contract</string>
     <string name="internship">Internship</string>
-    <string name="about_the_job">About the job</string>
-    <string name="skills">Skills</string>
+    <string name="jobs_count">%d jobs</string>
+    <string name="an_error_occurred">An error occurred</string>
     <string name="no_jobs_found">No jobs found</string>
-    <string name="loading">Loading...</string>
-    <string name="retry">Retry</string>
-    <string name="google_web_client_id">626322740351-t5qsn5q9hc9ad47feh37oahlrpke2p8f.apps.googleusercontent.com</string>
-    <string name="linkedin_client_id">86fdw92kq8r7hg</string>
+    <string name="try_adjusting_search">Try adjusting your search or filters</string>
+    <string name="clear_filters">Clear Filters</string>
+    <string name="promoted">Promoted</string>
+    <string name="company_logo">%s logo</string>
+
+    <!-- Job Detail Screen -->
+    <string name="about_the_job">About the job</string>
+    <string name="people_clicked_apply">%1$s \u00B7 %2$s \u00B7 67 people clicked apply</string>
+    <string name="promoted_by_hirer">Promoted by hirer \u00B7 Responses managed off LinkedIn</string>
+    <string name="remote_check">\u2713 Remote</string>
+    <string name="type_check">\u2713 %s</string>
+    <string name="location_not_specified">Location not specified</string>
+
+    <!-- Job Model time strings -->
+    <string name="recently_posted">Recently posted</string>
+    <string name="posted_today">Posted today</string>
+    <string name="posted_1_day_ago">Posted 1 day ago</string>
+    <string name="posted_days_ago">Posted %d days ago</string>
+    <string name="posted_1_week_ago">Posted 1 week ago</string>
+    <string name="posted_weeks_ago">Posted %d weeks ago</string>
+    <string name="posted_months_ago">Posted %d months ago</string>
+
+    <!-- Job Application Screen -->
+    <string name="failed_load_autofill">Failed to load autofill data</string>
+    <string name="auto_filling_application">Auto-filling application…</string>
+    <string name="fill_with_voice">Fill with Voice (%d)</string>
+    <string name="voice">Voice</string>
+
+    <!-- Voice Input Dialog -->
+    <string name="fill_with_voice_title">Fill with Voice</string>
+    <string name="field_x_of_y">Field %1$d of %2$d</string>
+    <string name="what_is_your">What is your:</string>
+    <string name="listening">Listening…</string>
+    <string name="you_said">You said:</string>
+    <string name="microphone_permission_required">Microphone permission required</string>
+    <string name="voice_error_audio">Audio error</string>
+    <string name="voice_error_client">Client error</string>
+    <string name="voice_error_permission">Permission denied</string>
+    <string name="voice_error_network">Network error</string>
+    <string name="voice_error_network_timeout">Network timeout</string>
+    <string name="voice_error_no_match">No speech detected</string>
+    <string name="voice_error_recognizer_busy">Recognizer busy</string>
+    <string name="voice_error_server">Server error</string>
+    <string name="voice_error_speech_timeout">No speech input</string>
+    <string name="voice_error_unknown">Unknown error</string>
+    <string name="voice_input">Voice input</string>
+
+    <!-- Onboarding Screen -->
+    <string name="welcome_to_elevatecareers">Welcome to ElevateCareers</string>
+    <string name="get_set_up_dream_job">Let\'s get you set up to find your dream job</string>
+    <string name="get_started">Get Started</string>
+    <string name="skip_setup">Skip Setup</string>
+    <string name="connect_linkedin">Connect LinkedIn</string>
+    <string name="auto_fill_linkedin_info">We\'ll auto-fill your profile with your LinkedIn information</string>
+    <string name="connected_as">Connected as %s</string>
+    <string name="skip_for_now">Skip for now</string>
+    <string name="upload_your_resume">Upload Your Resume</string>
+    <string name="auto_extract_skills">We\'ll automatically extract your skills and experience</string>
+    <string name="resume_uploaded_excl">Resume uploaded!</string>
+    <string name="change_resume">Change resume</string>
+    <string name="complete_setup">Complete Setup</string>
+    <string name="continue_with_resume">Continue with this resume</string>
+    <string name="uploading">Uploading…</string>
+    <string name="choose_resume">Choose Resume</string>
+    <string name="upload_later_from_settings">You can always upload your resume later from Settings</string>
+    <string name="create_or_upload_resume">Create or Upload Resume</string>
+    <string name="how_add_resume">How would you like to add your resume?</string>
+    <string name="build_with_ai_voice">Build with AI Voice</string>
+    <string name="new_badge">NEW</string>
+    <string name="chat_with_ai_create_resume">Chat with AI to create your resume</string>
+    <string name="upload_from_cloud">Upload from Cloud</string>
+    <string name="google_drive_dropbox">Google Drive, Dropbox, etc.</string>
+    <string name="device_storage">Device Storage</string>
+    <string name="browse_local_files">Browse local files</string>
+    <string name="resume_uploaded_success">Resume uploaded successfully!</string>
+    <string name="failed_to_upload">Failed to upload: %s</string>
+    <string name="no_file_selected">No file selected</string>
+    <string name="resume_uploaded_filename">Resume uploaded: %s</string>
+    <string name="file_selection_cancelled">File selection cancelled</string>
+
+    <!-- Profile Screen -->
+    <string name="profile">Profile</string>
+    <string name="no_name">No Name</string>
+    <string name="resume">Resume</string>
+    <string name="uploaded_date">Uploaded %s</string>
+    <string name="view_resume">View Resume</string>
+    <string name="delete_resume">Delete Resume</string>
+    <string name="upload_resume">Upload Resume</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="import_from_linkedin">Import from LinkedIn</string>
+    <string name="work_experience">Work Experience</string>
+    <string name="education">Education</string>
+    <string name="degree_fallback">Degree</string>
+    <string name="job_preferences">Job Preferences</string>
+    <string name="desired_roles">Desired Roles</string>
+    <string name="remote_preference">Remote Preference</string>
+    <string name="minimum_salary">Minimum Salary</string>
+
+    <!-- Profile ViewModel messages -->
+    <string name="not_authenticated">Not authenticated</string>
+    <string name="failed_load_profile">Failed to load profile</string>
+    <string name="failed_to_upload_msg">Failed to upload: %s</string>
+    <string name="failed_to_parse">Failed to parse: %s</string>
+    <string name="resume_uploaded_skills_exp">Resume uploaded! Found %1$d skills and %2$d experiences.</string>
+    <string name="upload_failed">Upload failed: %s</string>
+    <string name="resume_deleted_successfully">Resume deleted successfully</string>
+    <string name="failed_to_delete">Failed to delete: %s</string>
+    <string name="profile_updated_successfully">Profile updated successfully</string>
+    <string name="failed_to_update">Failed to update: %s</string>
+    <string name="linkedin_imported_successfully">LinkedIn profile imported successfully!</string>
+    <string name="failed_to_import">Failed to import: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="account">Account</string>
+    <string name="app_section">App</string>
+    <string name="notifications">Notifications</string>
+    <string name="manage_notification_preferences">Manage notification preferences</string>
+    <string name="privacy_security">Privacy &amp; Security</string>
+    <string name="control_data_privacy">Control your data and privacy</string>
+    <string name="about">About</string>
+    <string name="version_info">Version 1.0.0</string>
+    <string name="account_actions">Account Actions</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="permanently_delete_account">Permanently delete your account and data</string>
+    <string name="linkedin_profile">LinkedIn Profile</string>
+    <string name="connected">Connected</string>
+    <string name="sign_out_confirmation">Are you sure you want to sign out?</string>
+    <string name="delete_account_confirmation">Are you sure you want to delete your account?</string>
+    <string name="delete_account_warning">This action cannot be undone. All your data will be permanently deleted.</string>
+
+    <!-- AI Resume Builder Screen -->
+    <string name="ai_resume_builder">AI Resume Builder</string>
+    <string name="percent_complete">%d%% Complete</string>
+    <string name="start_over">Start Over</string>
+    <string name="share_resume">Share Resume</string>
+    <string name="resume_ready">Resume Ready!</string>
+    <string name="download_pdf">Download PDF</string>
+    <string name="generating_resume">Generating Your Resume…</string>
+    <string name="please_wait_pdf">Please wait while we create your PDF…</string>
+    <string name="resume_complete">Resume Complete!</string>
+    <string name="your_resume_ready">Your professional resume is ready</string>
+    <string name="resume_summary">Resume Summary</string>
+    <string name="pdf_generated_saved">PDF generated and saved to your account</string>
+    <string name="name_label">Name</string>
+    <string name="email_label">Email</string>
+    <string name="education_label">Education</string>
+    <string name="experience_label">Experience</string>
+    <string name="skills_label">Skills</string>
+    <string name="entry_count">%d entry</string>
+    <string name="skills_count">%d skills</string>
+    <string name="resume_completed_placeholder">Resume completed!</string>
+    <string name="type_your_response">Type your response…</string>
+
+    <!-- Resume Options Screen -->
+    <string name="create_your_resume">Create Your Resume</string>
+    <string name="how_create_resume">How would you like to create your resume?</string>
+    <string name="choose_method">Choose the method that works best for you</string>
+    <string name="build_with_ai_voice_desc">Have a conversation with our AI assistant. Just speak naturally and we\'ll create your resume.</string>
+    <string name="recommended">RECOMMENDED</string>
+    <string name="upload_existing_resume">Upload Existing Resume</string>
+    <string name="upload_existing_resume_desc">Have a resume already? Upload it and we\'ll parse and improve it.</string>
+    <string name="enter_manually">Enter Manually</string>
+    <string name="enter_manually_desc">Fill out a traditional form to create your resume from scratch.</string>
+
+    <!-- Resume Preview Screen -->
+    <string name="resume_preview">Resume Preview</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="graduated">Graduated: %s</string>
+
+    <!-- Custom File Picker -->
+    <string name="select_resume">Select Resume</string>
+    <string name="up_one_level">Up one level</string>
+    <string name="no_pdf_files_found">No PDF files found</string>
+    <string name="open_folder">Open folder</string>
+
+    <!-- Job List ViewModel -->
+    <string name="failed_to_load_jobs">Failed to load jobs</string>
+
+    <!-- Job Application ViewModel -->
+    <string name="failed_to_load_data">Failed to load data</string>
+    <string name="no_active_conversation">No active conversation. Please restart.</string>
+    <string name="conversation_expired">Conversation expired. Please start a new conversation.</string>
+    <string name="failed_start_conversation">Failed to start conversation</string>
+    <string name="failed_send_message">Failed to send message</string>
+    <string name="speech_recognition_error">Speech recognition error: %d</string>
+    <string name="tell_me_about_yourself">Tell me about yourself…</string>
 </resources>

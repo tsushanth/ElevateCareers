@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -14,6 +14,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
@@ -45,7 +46,7 @@ import kotlinx.serialization.json.Json
 import java.net.URLDecoder
 import java.net.URLEncoder
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
 
     private val authViewModel: AuthViewModel by viewModels()
 
@@ -106,29 +107,29 @@ class MainActivity : ComponentActivity() {
                                             runOnUiThread {
                                                 Toast.makeText(
                                                     this@MainActivity,
-                                                    "✅ LinkedIn connected: ${profile.fullName}",
+                                                    getString(R.string.linkedin_connected, profile.fullName),
                                                     Toast.LENGTH_LONG
                                                 ).show()
                                             }
                                         } else {
-                                            showLinkedInError("LinkedIn email is required")
+                                            showLinkedInError(getString(R.string.linkedin_email_required_error))
                                         }
                                     },
                                     onFailure = { error ->
-                                        showLinkedInError("Failed to fetch profile: ${error.message}")
+                                        showLinkedInError(getString(R.string.failed_fetch_profile, error.message ?: ""))
                                     }
                                 )
                             },
                             onFailure = { error ->
-                                showLinkedInError("LinkedIn login failed: ${error.message}")
+                                showLinkedInError(getString(R.string.linkedin_login_failed, error.message ?: ""))
                             }
                         )
                     } catch (e: Exception) {
-                        showLinkedInError("Error: ${e.message}")
+                        showLinkedInError(getString(R.string.error_generic, e.message ?: ""))
                     }
                 }
             } else {
-                showLinkedInError("No authorization code received")
+                showLinkedInError(getString(R.string.no_authorization_code))
             }
         }
     }
@@ -260,7 +261,7 @@ fun ElevateCareersApp(authViewModel: AuthViewModel) {
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = androidx.compose.ui.Alignment.Center
             ) {
-                androidx.compose.material3.Text("Upload Resume - Coming Soon")
+                androidx.compose.material3.Text(stringResource(R.string.upload_resume_coming_soon))
             }
         }
 
@@ -269,7 +270,7 @@ fun ElevateCareersApp(authViewModel: AuthViewModel) {
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = androidx.compose.ui.Alignment.Center
             ) {
-                androidx.compose.material3.Text("Manual Entry - Coming Soon")
+                androidx.compose.material3.Text(stringResource(R.string.manual_entry_coming_soon))
             }
         }
 

@@ -12,8 +12,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.kreativekoala.elevatecareers.R
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.kreativekoala.elevatecareers.data.model.ResumeData
@@ -31,10 +33,10 @@ fun ResumePreviewScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Resume Preview") },
+                title = { Text(stringResource(R.string.resume_preview)) },
                 navigationIcon = {
                     IconButton(onClick = { navController.navigateUp() }) {
-                        Icon(Icons.Default.ArrowBack, "Back")
+                        Icon(Icons.Default.ArrowBack, stringResource(R.string.back))
                     }
                 },
                 actions = {
@@ -46,11 +48,11 @@ fun ResumePreviewScreen(
                                     type = "text/plain"
                                     putExtra(Intent.EXTRA_TEXT, url)
                                 }
-                                context.startActivity(Intent.createChooser(intent, "Share Resume"))
+                                context.startActivity(Intent.createChooser(intent, context.getString(R.string.share_resume)))
                             }
                         }
                     ) {
-                        Icon(Icons.Default.Share, "Share")
+                        Icon(Icons.Default.Share, stringResource(R.string.share))
                     }
                 }
             )
@@ -81,7 +83,7 @@ fun ResumePreviewScreen(
                     ) {
                         Icon(Icons.Default.Download, contentDescription = null)
                         Spacer(Modifier.width(8.dp))
-                        Text("Download PDF")
+                        Text(stringResource(R.string.download_pdf))
                     }
 
                     // Edit button
@@ -91,7 +93,7 @@ fun ResumePreviewScreen(
                     ) {
                         Icon(Icons.Default.Edit, contentDescription = null)
                         Spacer(Modifier.width(8.dp))
-                        Text("Edit")
+                        Text(stringResource(R.string.edit))
                     }
                 }
             }
@@ -106,7 +108,7 @@ fun ResumePreviewScreen(
         ) {
             // Personal Info
             item {
-                ResumeSection(title = "Personal Information") {
+                ResumeSection(title = stringResource(R.string.personal_information)) {
                     PersonalInfoPreview(state.resumeData)
                 }
             }
@@ -114,7 +116,7 @@ fun ResumePreviewScreen(
             // Education
             if (state.resumeData.education.isNotEmpty()) {
                 item {
-                    ResumeSection(title = "Education") {
+                    ResumeSection(title = stringResource(R.string.education)) {
                         state.resumeData.education.forEach { edu ->
                             EducationItemPreview(edu)
                         }
@@ -125,7 +127,7 @@ fun ResumePreviewScreen(
             // Experience
             if (state.resumeData.experience.isNotEmpty()) {
                 item {
-                    ResumeSection(title = "Experience") {
+                    ResumeSection(title = stringResource(R.string.experience_label)) {
                         state.resumeData.experience.forEach { exp ->
                             ExperienceItemPreview(exp)
                         }
@@ -136,7 +138,7 @@ fun ResumePreviewScreen(
             // Skills
             if (state.resumeData.skills.isNotEmpty()) {
                 item {
-                    ResumeSection(title = "Skills") {
+                    ResumeSection(title = stringResource(R.string.skills)) {
                         SkillsPreview(state.resumeData.skills)
                     }
                 }
@@ -224,7 +226,7 @@ fun EducationItemPreview(education: com.kreativekoala.elevatecareers.data.model.
         )
         if (education.graduationYear.isNotEmpty()) {
             Text(
-                text = "Graduated: ${education.graduationYear}",
+                text = stringResource(R.string.graduated, education.graduationYear),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

@@ -15,8 +15,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.kreativekoala.elevatecareers.R
 
 @Composable
 fun VoiceInputDialog(
@@ -47,7 +49,7 @@ fun VoiceInputDialog(
                 errorMessage = null
             }
         } else {
-            errorMessage = "Microphone permission required"
+            errorMessage = context.getString(R.string.microphone_permission_required)
         }
     }
 
@@ -70,16 +72,16 @@ fun VoiceInputDialog(
             override fun onError(error: Int) {
                 isListening = false
                 errorMessage = when (error) {
-                    SpeechRecognizer.ERROR_AUDIO -> "Audio error"
-                    SpeechRecognizer.ERROR_CLIENT -> "Client error"
-                    SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "Permission denied"
-                    SpeechRecognizer.ERROR_NETWORK -> "Network error"
-                    SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "Network timeout"
-                    SpeechRecognizer.ERROR_NO_MATCH -> "No speech detected"
-                    SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "Recognizer busy"
-                    SpeechRecognizer.ERROR_SERVER -> "Server error"
-                    SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "No speech input"
-                    else -> "Unknown error"
+                    SpeechRecognizer.ERROR_AUDIO -> context.getString(R.string.voice_error_audio)
+                    SpeechRecognizer.ERROR_CLIENT -> context.getString(R.string.voice_error_client)
+                    SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> context.getString(R.string.voice_error_permission)
+                    SpeechRecognizer.ERROR_NETWORK -> context.getString(R.string.voice_error_network)
+                    SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> context.getString(R.string.voice_error_network_timeout)
+                    SpeechRecognizer.ERROR_NO_MATCH -> context.getString(R.string.voice_error_no_match)
+                    SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> context.getString(R.string.voice_error_recognizer_busy)
+                    SpeechRecognizer.ERROR_SERVER -> context.getString(R.string.voice_error_server)
+                    SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> context.getString(R.string.voice_error_speech_timeout)
+                    else -> context.getString(R.string.voice_error_unknown)
                 }
             }
 
@@ -117,9 +119,9 @@ fun VoiceInputDialog(
         },
         title = {
             Column {
-                Text("Fill with Voice")
+                Text(stringResource(R.string.fill_with_voice_title))
                 Text(
-                    text = "Field ${currentFieldIndex + 1} of ${unfilledFields.size}",
+                    text = stringResource(R.string.field_x_of_y, currentFieldIndex + 1, unfilledFields.size),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -142,7 +144,7 @@ fun VoiceInputDialog(
                         modifier = Modifier.padding(16.dp)
                     ) {
                         Text(
-                            text = "What is your:",
+                            text = stringResource(R.string.what_is_your),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSecondaryContainer
                         )
@@ -174,14 +176,14 @@ fun VoiceInputDialog(
                 ) {
                     Icon(
                         imageVector = if (isListening) Icons.Default.Stop else Icons.Default.Mic,
-                        contentDescription = if (isListening) "Stop" else "Start",
+                        contentDescription = if (isListening) stringResource(R.string.stop) else stringResource(R.string.start),
                         modifier = Modifier.size(32.dp)
                     )
                 }
 
                 if (isListening) {
                     Text(
-                        text = "Listening...",
+                        text = stringResource(R.string.listening),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.primary,
                         fontWeight = FontWeight.Medium
@@ -200,7 +202,7 @@ fun VoiceInputDialog(
                             modifier = Modifier.padding(16.dp)
                         ) {
                             Text(
-                                text = "You said:",
+                                text = stringResource(R.string.you_said),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onPrimaryContainer
                             )
@@ -242,7 +244,7 @@ fun VoiceInputDialog(
                 },
                 enabled = transcribedText.isNotEmpty()
             ) {
-                Text(if (hasMore) "Next" else "Done")
+                Text(if (hasMore) stringResource(R.string.next) else stringResource(R.string.done))
             }
         },
         dismissButton = {
@@ -255,12 +257,12 @@ fun VoiceInputDialog(
                             errorMessage = null
                         }
                     ) {
-                        Text("Back")
+                        Text(stringResource(R.string.back))
                     }
                 }
 
                 TextButton(onClick = onDismiss) {
-                    Text("Cancel")
+                    Text(stringResource(R.string.cancel))
                 }
             }
         }

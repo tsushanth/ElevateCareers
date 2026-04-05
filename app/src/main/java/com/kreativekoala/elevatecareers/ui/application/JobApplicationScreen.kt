@@ -12,7 +12,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.kreativekoala.elevatecareers.R
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.kreativekoala.elevatecareers.Job
@@ -50,12 +52,12 @@ fun JobApplicationScreen(
                     },
                     navigationIcon = {
                         IconButton(onClick = onBackClick) {
-                            Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back")
+                            Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.back))
                         }
                     },
                     actions = {
                         IconButton(onClick = { webView?.reload() }) {
-                            Icon(Icons.Default.Refresh, "Refresh")
+                            Icon(Icons.Default.Refresh, stringResource(R.string.refresh))
                         }
                     }
                 )
@@ -74,8 +76,8 @@ fun JobApplicationScreen(
             if (uiState.unfilledFields.isNotEmpty() && !uiState.isAutoFilling) {
                 ExtendedFloatingActionButton(
                     onClick = { showVoiceDialog = true },
-                    icon = { Icon(androidx.compose.material.icons.Icons.Default.Mic, "Voice") },
-                    text = { Text("Fill with Voice (${uiState.unfilledFields.size})") }
+                    icon = { Icon(androidx.compose.material.icons.Icons.Default.Mic, stringResource(R.string.voice)) },
+                    text = { Text(stringResource(R.string.fill_with_voice, uiState.unfilledFields.size)) }
                 )
             }
         },
@@ -101,7 +103,7 @@ fun JobApplicationScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "Failed to load autofill data",
+                            text = stringResource(R.string.failed_load_autofill),
                             style = MaterialTheme.typography.titleMedium
                         )
                         Spacer(modifier = Modifier.height(8.dp))
@@ -112,7 +114,7 @@ fun JobApplicationScreen(
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                         Button(onClick = { viewModel.loadAutofillData() }) {
-                            Text("Retry")
+                            Text(stringResource(R.string.retry))
                         }
                     }
                 }
@@ -155,7 +157,7 @@ fun JobApplicationScreen(
                             strokeWidth = 2.dp
                         )
                         Spacer(modifier = Modifier.width(12.dp))
-                        Text("Auto-filling application...")
+                        Text(stringResource(R.string.auto_filling_application))
                     }
                 }
             }

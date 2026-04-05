@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Elevate Careers</string>
+
+    <!-- Common / Shared -->
+    <string name="back">Zur\u00FCck</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="retry">Erneut versuchen</string>
+    <string name="close">Schlie\u00DFen</string>
+    <string name="search">Suchen</string>
+    <string name="email">E-Mail</string>
+    <string name="password">Passwort</string>
+    <string name="confirm_password">Passwort best\u00E4tigen</string>
+    <string name="loading">Wird geladen\u2026</string>
+    <string name="dismiss">Verwerfen</string>
+    <string name="save">Speichern</string>
+    <string name="apply">Bewerben</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="delete">L\u00F6schen</string>
+    <string name="share">Teilen</string>
+    <string name="view">Ansehen</string>
+    <string name="download">Herunterladen</string>
+    <string name="next">Weiter</string>
+    <string name="done">Fertig</string>
+    <string name="send">Senden</string>
+    <string name="refresh">Aktualisieren</string>
+    <string name="stop">Stoppen</string>
+    <string name="start">Starten</string>
+    <string name="continue_text">Fortfahren</string>
+    <string name="skills">F\u00E4higkeiten</string>
+    <string name="remote">Remote</string>
+
+    <!-- Sign In Screen -->
+    <string name="elevate_careers_title">ElevateCareers</string>
+    <string name="sign_in_to_continue">Melden Sie sich an, um fortzufahren</string>
+    <string name="complete_linkedin_login_browser">Schlie\u00DFen Sie die LinkedIn-Anmeldung in Ihrem Browser ab</string>
+    <string name="google_sign_in_failed">Google-Anmeldung fehlgeschlagen: %s</string>
+    <string name="sign_in">Anmelden</string>
+    <string name="dont_have_account">Noch kein Konto? </string>
+    <string name="sign_up">Registrieren</string>
+    <string name="continue_without_signing_in">Ohne Anmeldung fortfahren</string>
+    <string name="or">oder</string>
+    <string name="hide_password">Passwort verbergen</string>
+    <string name="show_password">Passwort anzeigen</string>
+    <string name="continue_with_google">Mit Google fortfahren</string>
+    <string name="google">Google</string>
+    <string name="continue_with_linkedin">Mit LinkedIn fortfahren</string>
+    <string name="linkedin">LinkedIn</string>
+
+    <!-- Sign Up Screen -->
+    <string name="create_your_account">Erstellen Sie Ihr Konto</string>
+    <string name="join_elevatecareers">Treten Sie ElevateCareers bei, um Ihre n\u00E4chste Chance zu finden</string>
+    <string name="at_least_6_characters">Mindestens 6 Zeichen</string>
+    <string name="passwords_dont_match">Passw\u00F6rter stimmen nicht \u00FCberein</string>
+    <string name="create_account">Konto erstellen</string>
+    <string name="already_have_account">Bereits ein Konto? </string>
+
+    <!-- Auth ViewModel errors -->
+    <string name="google_sign_in_failed_generic">Google-Anmeldung fehlgeschlagen</string>
+    <string name="linkedin_email_required">LinkedIn-E-Mail ist erforderlich</string>
+    <string name="linkedin_sign_in_failed">LinkedIn-Anmeldung fehlgeschlagen: %s</string>
+    <string name="sign_in_failed">Anmeldung fehlgeschlagen</string>
+    <string name="sign_up_failed">Registrierung fehlgeschlagen</string>
+    <string name="delete_account_failed">Kontol\u00F6schung fehlgeschlagen</string>
+
+    <!-- MainActivity -->
+    <string name="linkedin_connected">LinkedIn verbunden: %s</string>
+    <string name="linkedin_email_required_error">LinkedIn-E-Mail ist erforderlich</string>
+    <string name="failed_fetch_profile">Profil konnte nicht abgerufen werden: %s</string>
+    <string name="linkedin_login_failed">LinkedIn-Anmeldung fehlgeschlagen: %s</string>
+    <string name="error_generic">Fehler: %s</string>
+    <string name="no_authorization_code">Kein Autorisierungscode erhalten</string>
+    <string name="upload_resume_coming_soon">Lebenslauf hochladen - Bald verf\u00FCgbar</string>
+    <string name="manual_entry_coming_soon">Manuelle Eingabe - Bald verf\u00FCgbar</string>
+
+    <!-- Job List Screen -->
+    <string name="jobs_title">Stellenangebote</string>
+    <string name="close_search">Suche schlie\u00DFen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="search_jobs_placeholder">Stellen nach Titel, Unternehmen oder Standort suchen</string>
+    <string name="clear">L\u00F6schen</string>
+    <string name="full_time">Vollzeit</string>
+    <string name="part_time">Teilzeit</string>
+    <string name="contract">Vertrag</string>
+    <string name="internship">Praktikum</string>
+    <string name="jobs_count">%d Stellen</string>
+    <string name="an_error_occurred">Ein Fehler ist aufgetreten</string>
+    <string name="no_jobs_found">Keine Stellen gefunden</string>
+    <string name="try_adjusting_search">Versuchen Sie, Ihre Suche oder Filter anzupassen</string>
+    <string name="clear_filters">Filter l\u00F6schen</string>
+    <string name="promoted">Gef\u00F6rdert</string>
+    <string name="company_logo">%s-Logo</string>
+
+    <!-- Job Detail Screen -->
+    <string name="about_the_job">\u00DCber die Stelle</string>
+    <string name="people_clicked_apply">%1$s \u00B7 %2$s \u00B7 67 Personen haben auf Bewerben geklickt</string>
+    <string name="promoted_by_hirer">Vom Arbeitgeber gef\u00F6rdert \u00B7 Antworten werden au\u00DFerhalb von LinkedIn verwaltet</string>
+    <string name="remote_check">\u2713 Remote</string>
+    <string name="type_check">\u2713 %s</string>
+    <string name="location_not_specified">Standort nicht angegeben</string>
+
+    <!-- Job Model time strings -->
+    <string name="recently_posted">K\u00FCrzlich ver\u00F6ffentlicht</string>
+    <string name="posted_today">Heute ver\u00F6ffentlicht</string>
+    <string name="posted_1_day_ago">Vor 1 Tag ver\u00F6ffentlicht</string>
+    <string name="posted_days_ago">Vor %d Tagen ver\u00F6ffentlicht</string>
+    <string name="posted_1_week_ago">Vor 1 Woche ver\u00F6ffentlicht</string>
+    <string name="posted_weeks_ago">Vor %d Wochen ver\u00F6ffentlicht</string>
+    <string name="posted_months_ago">Vor %d Monaten ver\u00F6ffentlicht</string>
+
+    <!-- Job Application Screen -->
+    <string name="failed_load_autofill">Autofill-Daten konnten nicht geladen werden</string>
+    <string name="auto_filling_application">Bewerbung wird automatisch ausgef\u00FCllt\u2026</string>
+    <string name="fill_with_voice">Mit Stimme ausf\u00FCllen (%d)</string>
+    <string name="voice">Stimme</string>
+
+    <!-- Voice Input Dialog -->
+    <string name="fill_with_voice_title">Mit Stimme ausf\u00FCllen</string>
+    <string name="field_x_of_y">Feld %1$d von %2$d</string>
+    <string name="what_is_your">Was ist Ihr:</string>
+    <string name="listening">H\u00F6rt zu\u2026</string>
+    <string name="you_said">Sie sagten:</string>
+    <string name="microphone_permission_required">Mikrofonberechtigung erforderlich</string>
+    <string name="voice_error_audio">Audiofehler</string>
+    <string name="voice_error_client">Client-Fehler</string>
+    <string name="voice_error_permission">Berechtigung verweigert</string>
+    <string name="voice_error_network">Netzwerkfehler</string>
+    <string name="voice_error_network_timeout">Netzwerk-Zeitlimit \u00FCberschritten</string>
+    <string name="voice_error_no_match">Keine Sprache erkannt</string>
+    <string name="voice_error_recognizer_busy">Erkennung besch\u00E4ftigt</string>
+    <string name="voice_error_server">Serverfehler</string>
+    <string name="voice_error_speech_timeout">Keine Spracheingabe</string>
+    <string name="voice_error_unknown">Unbekannter Fehler</string>
+    <string name="voice_input">Spracheingabe</string>
+
+    <!-- Onboarding Screen -->
+    <string name="welcome_to_elevatecareers">Willkommen bei ElevateCareers</string>
+    <string name="get_set_up_dream_job">Lassen Sie uns Ihren Traumjob finden</string>
+    <string name="get_started">Loslegen</string>
+    <string name="skip_setup">Einrichtung \u00FCberspringen</string>
+    <string name="connect_linkedin">LinkedIn verbinden</string>
+    <string name="auto_fill_linkedin_info">Wir f\u00FCllen Ihr Profil automatisch mit Ihren LinkedIn-Informationen aus</string>
+    <string name="connected_as">Verbunden als %s</string>
+    <string name="skip_for_now">Vorerst \u00FCberspringen</string>
+    <string name="upload_your_resume">Laden Sie Ihren Lebenslauf hoch</string>
+    <string name="auto_extract_skills">Wir extrahieren automatisch Ihre F\u00E4higkeiten und Erfahrung</string>
+    <string name="resume_uploaded_excl">Lebenslauf hochgeladen!</string>
+    <string name="change_resume">Lebenslauf \u00E4ndern</string>
+    <string name="complete_setup">Einrichtung abschlie\u00DFen</string>
+    <string name="continue_with_resume">Mit diesem Lebenslauf fortfahren</string>
+    <string name="uploading">Wird hochgeladen\u2026</string>
+    <string name="choose_resume">Lebenslauf ausw\u00E4hlen</string>
+    <string name="upload_later_from_settings">Sie k\u00F6nnen Ihren Lebenslauf sp\u00E4ter in den Einstellungen hochladen</string>
+    <string name="create_or_upload_resume">Lebenslauf erstellen oder hochladen</string>
+    <string name="how_add_resume">Wie m\u00F6chten Sie Ihren Lebenslauf hinzuf\u00FCgen?</string>
+    <string name="build_with_ai_voice">Mit KI-Stimme erstellen</string>
+    <string name="new_badge">NEU</string>
+    <string name="chat_with_ai_create_resume">Unterhalten Sie sich mit der KI, um Ihren Lebenslauf zu erstellen</string>
+    <string name="upload_from_cloud">Aus der Cloud hochladen</string>
+    <string name="google_drive_dropbox">Google Drive, Dropbox, etc.</string>
+    <string name="device_storage">Ger\u00E4tespeicher</string>
+    <string name="browse_local_files">Lokale Dateien durchsuchen</string>
+    <string name="resume_uploaded_success">Lebenslauf erfolgreich hochgeladen!</string>
+    <string name="failed_to_upload">Hochladen fehlgeschlagen: %s</string>
+    <string name="no_file_selected">Keine Datei ausgew\u00E4hlt</string>
+    <string name="resume_uploaded_filename">Lebenslauf hochgeladen: %s</string>
+    <string name="file_selection_cancelled">Dateiauswahl abgebrochen</string>
+
+    <!-- Profile Screen -->
+    <string name="profile">Profil</string>
+    <string name="no_name">Kein Name</string>
+    <string name="resume">Lebenslauf</string>
+    <string name="uploaded_date">Hochgeladen am %s</string>
+    <string name="view_resume">Lebenslauf ansehen</string>
+    <string name="delete_resume">Lebenslauf l\u00F6schen</string>
+    <string name="upload_resume">Lebenslauf hochladen</string>
+    <string name="edit_profile">Profil bearbeiten</string>
+    <string name="import_from_linkedin">Von LinkedIn importieren</string>
+    <string name="work_experience">Berufserfahrung</string>
+    <string name="education">Bildung</string>
+    <string name="degree_fallback">Abschluss</string>
+    <string name="job_preferences">Stellenpr\u00E4ferenzen</string>
+    <string name="desired_roles">Gew\u00FCnschte Rollen</string>
+    <string name="remote_preference">Remote-Pr\u00E4ferenz</string>
+    <string name="minimum_salary">Mindestgehalt</string>
+
+    <!-- Profile ViewModel messages -->
+    <string name="not_authenticated">Nicht authentifiziert</string>
+    <string name="failed_load_profile">Profil konnte nicht geladen werden</string>
+    <string name="failed_to_upload_msg">Hochladen fehlgeschlagen: %s</string>
+    <string name="failed_to_parse">Analyse fehlgeschlagen: %s</string>
+    <string name="resume_uploaded_skills_exp">Lebenslauf hochgeladen! %1$d F\u00E4higkeiten und %2$d Erfahrungen gefunden.</string>
+    <string name="upload_failed">Hochladen fehlgeschlagen: %s</string>
+    <string name="resume_deleted_successfully">Lebenslauf erfolgreich gel\u00F6scht</string>
+    <string name="failed_to_delete">L\u00F6schen fehlgeschlagen: %s</string>
+    <string name="profile_updated_successfully">Profil erfolgreich aktualisiert</string>
+    <string name="failed_to_update">Aktualisierung fehlgeschlagen: %s</string>
+    <string name="linkedin_imported_successfully">LinkedIn-Profil erfolgreich importiert!</string>
+    <string name="failed_to_import">Import fehlgeschlagen: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="account">Konto</string>
+    <string name="app_section">App</string>
+    <string name="notifications">Benachrichtigungen</string>
+    <string name="manage_notification_preferences">Benachrichtigungseinstellungen verwalten</string>
+    <string name="privacy_security">Datenschutz und Sicherheit</string>
+    <string name="control_data_privacy">Kontrollieren Sie Ihre Daten und Privatsph\u00E4re</string>
+    <string name="about">\u00DCber</string>
+    <string name="version_info">Version 1.0.0</string>
+    <string name="account_actions">Kontoaktionen</string>
+    <string name="sign_out">Abmelden</string>
+    <string name="delete_account">Konto l\u00F6schen</string>
+    <string name="permanently_delete_account">Konto und Daten dauerhaft l\u00F6schen</string>
+    <string name="linkedin_profile">LinkedIn-Profil</string>
+    <string name="connected">Verbunden</string>
+    <string name="sign_out_confirmation">Sind Sie sicher, dass Sie sich abmelden m\u00F6chten?</string>
+    <string name="delete_account_confirmation">Sind Sie sicher, dass Sie Ihr Konto l\u00F6schen m\u00F6chten?</string>
+    <string name="delete_account_warning">Diese Aktion kann nicht r\u00FCckg\u00E4ngig gemacht werden. Alle Ihre Daten werden dauerhaft gel\u00F6scht.</string>
+
+    <!-- AI Resume Builder Screen -->
+    <string name="ai_resume_builder">KI-Lebenslauf-Ersteller</string>
+    <string name="percent_complete">%d%% abgeschlossen</string>
+    <string name="start_over">Neu starten</string>
+    <string name="share_resume">Lebenslauf teilen</string>
+    <string name="resume_ready">Lebenslauf fertig!</string>
+    <string name="download_pdf">PDF herunterladen</string>
+    <string name="generating_resume">Ihr Lebenslauf wird erstellt\u2026</string>
+    <string name="please_wait_pdf">Bitte warten Sie, w\u00E4hrend wir Ihr PDF erstellen\u2026</string>
+    <string name="resume_complete">Lebenslauf fertig!</string>
+    <string name="your_resume_ready">Ihr professioneller Lebenslauf ist bereit</string>
+    <string name="resume_summary">Lebenslauf-Zusammenfassung</string>
+    <string name="pdf_generated_saved">PDF erstellt und in Ihrem Konto gespeichert</string>
+    <string name="name_label">Name</string>
+    <string name="email_label">E-Mail</string>
+    <string name="education_label">Bildung</string>
+    <string name="experience_label">Erfahrung</string>
+    <string name="skills_label">F\u00E4higkeiten</string>
+    <string name="entry_count">%d Eintrag</string>
+    <string name="skills_count">%d F\u00E4higkeiten</string>
+    <string name="resume_completed_placeholder">Lebenslauf abgeschlossen!</string>
+    <string name="type_your_response">Geben Sie Ihre Antwort ein\u2026</string>
+
+    <!-- Resume Options Screen -->
+    <string name="create_your_resume">Erstellen Sie Ihren Lebenslauf</string>
+    <string name="how_create_resume">Wie m\u00F6chten Sie Ihren Lebenslauf erstellen?</string>
+    <string name="choose_method">W\u00E4hlen Sie die Methode, die am besten zu Ihnen passt</string>
+    <string name="build_with_ai_voice_desc">Unterhalten Sie sich mit unserem KI-Assistenten. Sprechen Sie einfach nat\u00FCrlich und wir erstellen Ihren Lebenslauf.</string>
+    <string name="recommended">EMPFOHLEN</string>
+    <string name="upload_existing_resume">Vorhandenen Lebenslauf hochladen</string>
+    <string name="upload_existing_resume_desc">Haben Sie bereits einen Lebenslauf? Laden Sie ihn hoch und wir analysieren und verbessern ihn.</string>
+    <string name="enter_manually">Manuell eingeben</string>
+    <string name="enter_manually_desc">F\u00FCllen Sie ein traditionelles Formular aus, um Ihren Lebenslauf von Grund auf zu erstellen.</string>
+
+    <!-- Resume Preview Screen -->
+    <string name="resume_preview">Lebenslauf-Vorschau</string>
+    <string name="personal_information">Pers\u00F6nliche Informationen</string>
+    <string name="graduated">Abschluss: %s</string>
+
+    <!-- Custom File Picker -->
+    <string name="select_resume">Lebenslauf ausw\u00E4hlen</string>
+    <string name="up_one_level">Eine Ebene h\u00F6her</string>
+    <string name="no_pdf_files_found">Keine PDF-Dateien gefunden</string>
+    <string name="open_folder">Ordner \u00F6ffnen</string>
+
+    <!-- ViewModel messages -->
+    <string name="failed_to_load_jobs">Stellen konnten nicht geladen werden</string>
+    <string name="failed_to_load_data">Daten konnten nicht geladen werden</string>
+    <string name="no_active_conversation">Keine aktive Konversation. Bitte neu starten.</string>
+    <string name="conversation_expired">Konversation abgelaufen. Bitte starten Sie eine neue Konversation.</string>
+    <string name="failed_start_conversation">Konversation konnte nicht gestartet werden</string>
+    <string name="failed_send_message">Nachricht konnte nicht gesendet werden</string>
+    <string name="speech_recognition_error">Spracherkennungsfehler: %d</string>
+    <string name="tell_me_about_yourself">Erz\u00E4hlen Sie mir von sich\u2026</string>
+</resources>

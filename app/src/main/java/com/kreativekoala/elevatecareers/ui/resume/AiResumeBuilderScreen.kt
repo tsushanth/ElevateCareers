@@ -21,11 +21,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.kreativekoala.elevatecareers.R
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -60,10 +62,10 @@ fun AiResumeBuilderScreen(
             TopAppBar(
                 title = {
                     Column {
-                        Text("AI Resume Builder")
+                        Text(stringResource(R.string.ai_resume_builder))
                         if (state.progress > 0) {
                             Text(
-                                text = "${(state.progress * 100).toInt()}% Complete",
+                                text = stringResource(R.string.percent_complete, (state.progress * 100).toInt()),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
@@ -72,12 +74,12 @@ fun AiResumeBuilderScreen(
                 },
                 navigationIcon = {
                     IconButton(onClick = { navController.navigateUp() }) {
-                        Icon(Icons.Default.ArrowBack, "Back")
+                        Icon(Icons.Default.ArrowBack, stringResource(R.string.back))
                     }
                 },
                 actions = {
                     IconButton(onClick = { viewModel.resetConversation() }) {
-                        Icon(Icons.Default.Refresh, "Start Over")
+                        Icon(Icons.Default.Refresh, stringResource(R.string.start_over))
                     }
                 }
             )
@@ -104,7 +106,7 @@ fun AiResumeBuilderScreen(
                             type = "text/plain"
                             putExtra(Intent.EXTRA_TEXT, state.pdfUrl)
                         }
-                        context.startActivity(Intent.createChooser(intent, "Share Resume"))
+                        context.startActivity(Intent.createChooser(intent, context.getString(R.string.share_resume)))
                     }
                 )
             } else {
@@ -264,7 +266,7 @@ fun ChatInputBottomBar(
             ) {
                 Icon(
                     imageVector = if (isListening) Icons.Default.Mic else Icons.Default.MicNone,
-                    contentDescription = "Voice input"
+                    contentDescription = stringResource(R.string.voice_input)
                 )
             }
 
@@ -275,8 +277,8 @@ fun ChatInputBottomBar(
                 modifier = Modifier.weight(1f),
                 placeholder = {
                     Text(
-                        if (isComplete) "Resume completed!"
-                        else "Type your response..."
+                        if (isComplete) stringResource(R.string.resume_completed_placeholder)
+                        else stringResource(R.string.type_your_response)
                     )
                 },
                 enabled = !isLoading && !isComplete,
@@ -294,7 +296,7 @@ fun ChatInputBottomBar(
                 enabled = message.isNotBlank() && !isLoading && !isComplete,
                 modifier = Modifier.size(48.dp)
             ) {
-                Icon(Icons.Default.Send, "Send")
+                Icon(Icons.Default.Send, stringResource(R.string.send))
             }
         }
     }
@@ -330,7 +332,7 @@ fun CompletionBottomBar(
                     modifier = Modifier.size(24.dp)
                 )
                 Text(
-                    text = "Resume Ready!",
+                    text = stringResource(R.string.resume_ready),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onPrimaryContainer
@@ -348,7 +350,7 @@ fun CompletionBottomBar(
                 ) {
                     Icon(Icons.Default.Visibility, contentDescription = null, modifier = Modifier.size(18.dp))
                     Spacer(Modifier.width(4.dp))
-                    Text("View")
+                    Text(stringResource(R.string.view))
                 }
 
                 // Download button
@@ -358,7 +360,7 @@ fun CompletionBottomBar(
                 ) {
                     Icon(Icons.Default.Download, contentDescription = null, modifier = Modifier.size(18.dp))
                     Spacer(Modifier.width(4.dp))
-                    Text("Download")
+                    Text(stringResource(R.string.download))
                 }
 
                 // Share button
@@ -368,7 +370,7 @@ fun CompletionBottomBar(
                 ) {
                     Icon(Icons.Default.Share, contentDescription = null, modifier = Modifier.size(18.dp))
                     Spacer(Modifier.width(4.dp))
-                    Text("Share")
+                    Text(stringResource(R.string.share))
                 }
             }
         }
@@ -414,15 +416,15 @@ fun CompletionCard(
 
                 Column {
                     Text(
-                        text = if (isGenerating) "Generating Your Resume..." else "🎉 Resume Complete!",
+                        text = if (isGenerating) stringResource(R.string.generating_resume) else stringResource(R.string.resume_complete),
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = if (isGenerating) {
-                            "Please wait while we create your PDF..."
+                            stringResource(R.string.please_wait_pdf)
                         } else {
-                            "Your professional resume is ready"
+                            stringResource(R.string.your_resume_ready)
                         },
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f)
@@ -434,7 +436,7 @@ fun CompletionCard(
 
             // Resume summary
             Text(
-                text = "Resume Summary",
+                text = stringResource(R.string.resume_summary),
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.SemiBold
             )
@@ -443,7 +445,7 @@ fun CompletionCard(
 
             if (!isGenerating && pdfUrl != null) {
                 Text(
-                    text = "✅ PDF generated and saved to your account",
+                    text = stringResource(R.string.pdf_generated_saved),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Medium
@@ -458,28 +460,28 @@ fun ResumeDataSummary(resumeData: com.kreativekoala.elevatecareers.data.model.Re
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         SummaryRow(
             icon = Icons.Default.Person,
-            label = "Name",
+            label = stringResource(R.string.name_label),
             value = resumeData.personalInfo.name
         )
         SummaryRow(
             icon = Icons.Default.Email,
-            label = "Email",
+            label = stringResource(R.string.email_label),
             value = resumeData.personalInfo.email
         )
         SummaryRow(
             icon = Icons.Default.School,
-            label = "Education",
-            value = "${resumeData.education.size} entry"
+            label = stringResource(R.string.education_label),
+            value = stringResource(R.string.entry_count, resumeData.education.size)
         )
         SummaryRow(
             icon = Icons.Default.Work,
-            label = "Experience",
-            value = "${resumeData.experience.size} entry"
+            label = stringResource(R.string.experience_label),
+            value = stringResource(R.string.entry_count, resumeData.experience.size)
         )
         SummaryRow(
             icon = Icons.Default.Star,
-            label = "Skills",
-            value = "${resumeData.skills.size} skills"
+            label = stringResource(R.string.skills_label),
+            value = stringResource(R.string.skills_count, resumeData.skills.size)
         )
     }
 }
@@ -605,7 +607,7 @@ fun ErrorBanner(
             IconButton(onClick = onDismiss) {
                 Icon(
                     Icons.Default.Close,
-                    contentDescription = "Dismiss",
+                    contentDescription = stringResource(R.string.dismiss),
                     tint = MaterialTheme.colorScheme.onErrorContainer
                 )
             }

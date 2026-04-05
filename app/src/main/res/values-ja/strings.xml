@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Elevate Careers</string>
+
+    <!-- Common / Shared -->
+    <string name="back">\u623B\u308B</string>
+    <string name="cancel">\u30AD\u30E3\u30F3\u30BB\u30EB</string>
+    <string name="retry">\u518D\u8A66\u884C</string>
+    <string name="close">\u9589\u3058\u308B</string>
+    <string name="search">\u691C\u7D22</string>
+    <string name="email">\u30E1\u30FC\u30EB</string>
+    <string name="password">\u30D1\u30B9\u30EF\u30FC\u30C9</string>
+    <string name="confirm_password">\u30D1\u30B9\u30EF\u30FC\u30C9\u78BA\u8A8D</string>
+    <string name="loading">\u8AAD\u307F\u8FBC\u307F\u4E2D\u2026</string>
+    <string name="dismiss">\u9589\u3058\u308B</string>
+    <string name="save">\u4FDD\u5B58</string>
+    <string name="apply">\u5FDC\u52DF</string>
+    <string name="edit">\u7DE8\u96C6</string>
+    <string name="delete">\u524A\u9664</string>
+    <string name="share">\u5171\u6709</string>
+    <string name="view">\u8868\u793A</string>
+    <string name="download">\u30C0\u30A6\u30F3\u30ED\u30FC\u30C9</string>
+    <string name="next">\u6B21\u3078</string>
+    <string name="done">\u5B8C\u4E86</string>
+    <string name="send">\u9001\u4FE1</string>
+    <string name="refresh">\u66F4\u65B0</string>
+    <string name="stop">\u505C\u6B62</string>
+    <string name="start">\u958B\u59CB</string>
+    <string name="continue_text">\u7D9A\u884C</string>
+    <string name="skills">\u30B9\u30AD\u30EB</string>
+    <string name="remote">\u30EA\u30E2\u30FC\u30C8</string>
+
+    <!-- Sign In Screen -->
+    <string name="elevate_careers_title">ElevateCareers</string>
+    <string name="sign_in_to_continue">\u7D9A\u884C\u3059\u308B\u306B\u306F\u30B5\u30A4\u30F3\u30A4\u30F3\u3057\u3066\u304F\u3060\u3055\u3044</string>
+    <string name="complete_linkedin_login_browser">\u30D6\u30E9\u30A6\u30B6\u3067LinkedIn\u30ED\u30B0\u30A4\u30F3\u3092\u5B8C\u4E86\u3057\u3066\u304F\u3060\u3055\u3044</string>
+    <string name="google_sign_in_failed">Google\u30B5\u30A4\u30F3\u30A4\u30F3\u5931\u6557: %s</string>
+    <string name="sign_in">\u30B5\u30A4\u30F3\u30A4\u30F3</string>
+    <string name="dont_have_account">\u30A2\u30AB\u30A6\u30F3\u30C8\u3092\u304A\u6301\u3061\u3067\u306A\u3044\u65B9 </string>
+    <string name="sign_up">\u30B5\u30A4\u30F3\u30A2\u30C3\u30D7</string>
+    <string name="continue_without_signing_in">\u30B5\u30A4\u30F3\u30A4\u30F3\u305B\u305A\u306B\u7D9A\u884C</string>
+    <string name="or">\u307E\u305F\u306F</string>
+    <string name="hide_password">\u30D1\u30B9\u30EF\u30FC\u30C9\u3092\u975E\u8868\u793A</string>
+    <string name="show_password">\u30D1\u30B9\u30EF\u30FC\u30C9\u3092\u8868\u793A</string>
+    <string name="continue_with_google">Google\u3067\u7D9A\u884C</string>
+    <string name="google">Google</string>
+    <string name="continue_with_linkedin">LinkedIn\u3067\u7D9A\u884C</string>
+    <string name="linkedin">LinkedIn</string>
+
+    <!-- Sign Up Screen -->
+    <string name="create_your_account">\u30A2\u30AB\u30A6\u30F3\u30C8\u3092\u4F5C\u6210</string>
+    <string name="join_elevatecareers">ElevateCareers\u306B\u53C2\u52A0\u3057\u3066\u6B21\u306E\u30C1\u30E3\u30F3\u30B9\u3092\u898B\u3064\u3051\u307E\u3057\u3087\u3046</string>
+    <string name="at_least_6_characters">6\u6587\u5B57\u4EE5\u4E0A</string>
+    <string name="passwords_dont_match">\u30D1\u30B9\u30EF\u30FC\u30C9\u304C\u4E00\u81F4\u3057\u307E\u305B\u3093</string>
+    <string name="create_account">\u30A2\u30AB\u30A6\u30F3\u30C8\u4F5C\u6210</string>
+    <string name="already_have_account">\u65E2\u306B\u30A2\u30AB\u30A6\u30F3\u30C8\u3092\u304A\u6301\u3061\u306E\u65B9 </string>
+
+    <!-- Auth ViewModel errors -->
+    <string name="google_sign_in_failed_generic">Google\u30B5\u30A4\u30F3\u30A4\u30F3\u5931\u6557</string>
+    <string name="linkedin_email_required">LinkedIn\u306E\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9\u304C\u5FC5\u8981\u3067\u3059</string>
+    <string name="linkedin_sign_in_failed">LinkedIn\u30B5\u30A4\u30F3\u30A4\u30F3\u5931\u6557: %s</string>
+    <string name="sign_in_failed">\u30B5\u30A4\u30F3\u30A4\u30F3\u5931\u6557</string>
+    <string name="sign_up_failed">\u30B5\u30A4\u30F3\u30A2\u30C3\u30D7\u5931\u6557</string>
+    <string name="delete_account_failed">\u30A2\u30AB\u30A6\u30F3\u30C8\u524A\u9664\u5931\u6557</string>
+
+    <!-- MainActivity -->
+    <string name="linkedin_connected">LinkedIn\u63A5\u7D9A\u6E08\u307F: %s</string>
+    <string name="linkedin_email_required_error">LinkedIn\u306E\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9\u304C\u5FC5\u8981\u3067\u3059</string>
+    <string name="failed_fetch_profile">\u30D7\u30ED\u30D5\u30A3\u30FC\u30EB\u306E\u53D6\u5F97\u306B\u5931\u6557: %s</string>
+    <string name="linkedin_login_failed">LinkedIn\u30ED\u30B0\u30A4\u30F3\u5931\u6557: %s</string>
+    <string name="error_generic">\u30A8\u30E9\u30FC: %s</string>
+    <string name="no_authorization_code">\u8A8D\u8A3C\u30B3\u30FC\u30C9\u304C\u53D7\u4FE1\u3055\u308C\u307E\u305B\u3093\u3067\u3057\u305F</string>
+    <string name="upload_resume_coming_soon">\u5C65\u6B74\u66F8\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9 - \u8FD1\u65E5\u516C\u958B</string>
+    <string name="manual_entry_coming_soon">\u624B\u52D5\u5165\u529B - \u8FD1\u65E5\u516C\u958B</string>
+
+    <!-- Job List Screen -->
+    <string name="jobs_title">\u6C42\u4EBA</string>
+    <string name="close_search">\u691C\u7D22\u3092\u9589\u3058\u308B</string>
+    <string name="settings">\u8A2D\u5B9A</string>
+    <string name="search_jobs_placeholder">\u8077\u7A2E\u3001\u4F1A\u793E\u540D\u3001\u52E4\u52D9\u5730\u3067\u691C\u7D22</string>
+    <string name="clear">\u30AF\u30EA\u30A2</string>
+    <string name="full_time">\u30D5\u30EB\u30BF\u30A4\u30E0</string>
+    <string name="part_time">\u30D1\u30FC\u30C8\u30BF\u30A4\u30E0</string>
+    <string name="contract">\u5951\u7D04</string>
+    <string name="internship">\u30A4\u30F3\u30BF\u30FC\u30F3\u30B7\u30C3\u30D7</string>
+    <string name="jobs_count">%d\u4EF6\u306E\u6C42\u4EBA</string>
+    <string name="an_error_occurred">\u30A8\u30E9\u30FC\u304C\u767A\u751F\u3057\u307E\u3057\u305F</string>
+    <string name="no_jobs_found">\u6C42\u4EBA\u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093</string>
+    <string name="try_adjusting_search">\u691C\u7D22\u6761\u4EF6\u3084\u30D5\u30A3\u30EB\u30BF\u30FC\u3092\u8ABF\u6574\u3057\u3066\u307F\u3066\u304F\u3060\u3055\u3044</string>
+    <string name="clear_filters">\u30D5\u30A3\u30EB\u30BF\u30FC\u3092\u30AF\u30EA\u30A2</string>
+    <string name="promoted">\u30D7\u30ED\u30E2\u30FC\u30B7\u30E7\u30F3</string>
+    <string name="company_logo">%s\u306E\u30ED\u30B4</string>
+
+    <!-- Job Detail Screen -->
+    <string name="about_the_job">\u6C42\u4EBA\u306B\u3064\u3044\u3066</string>
+    <string name="people_clicked_apply">%1$s \u00B7 %2$s \u00B7 67\u4EBA\u304C\u5FDC\u52DF\u3092\u30AF\u30EA\u30C3\u30AF</string>
+    <string name="promoted_by_hirer">\u63A1\u7528\u62C5\u5F53\u8005\u306B\u3088\u308B\u30D7\u30ED\u30E2\u30FC\u30B7\u30E7\u30F3 \u00B7 \u5FDC\u7B54\u306FLinkedIn\u5916\u3067\u7BA1\u7406</string>
+    <string name="remote_check">\u2713 \u30EA\u30E2\u30FC\u30C8</string>
+    <string name="type_check">\u2713 %s</string>
+    <string name="location_not_specified">\u52E4\u52D9\u5730\u672A\u6307\u5B9A</string>
+
+    <!-- Job Model time strings -->
+    <string name="recently_posted">\u6700\u8FD1\u63B2\u8F09</string>
+    <string name="posted_today">\u672C\u65E5\u63B2\u8F09</string>
+    <string name="posted_1_day_ago">1\u65E5\u524D\u306B\u63B2\u8F09</string>
+    <string name="posted_days_ago">%d\u65E5\u524D\u306B\u63B2\u8F09</string>
+    <string name="posted_1_week_ago">1\u9031\u9593\u524D\u306B\u63B2\u8F09</string>
+    <string name="posted_weeks_ago">%d\u9031\u9593\u524D\u306B\u63B2\u8F09</string>
+    <string name="posted_months_ago">%d\u30F6\u6708\u524D\u306B\u63B2\u8F09</string>
+
+    <!-- Job Application Screen -->
+    <string name="failed_load_autofill">\u81EA\u52D5\u5165\u529B\u30C7\u30FC\u30BF\u306E\u8AAD\u307F\u8FBC\u307F\u306B\u5931\u6557</string>
+    <string name="auto_filling_application">\u5FDC\u52DF\u3092\u81EA\u52D5\u5165\u529B\u4E2D\u2026</string>
+    <string name="fill_with_voice">\u97F3\u58F0\u3067\u5165\u529B (%d)</string>
+    <string name="voice">\u97F3\u58F0</string>
+
+    <!-- Voice Input Dialog -->
+    <string name="fill_with_voice_title">\u97F3\u58F0\u3067\u5165\u529B</string>
+    <string name="field_x_of_y">\u30D5\u30A3\u30FC\u30EB\u30C9 %1$d / %2$d</string>
+    <string name="what_is_your">\u3042\u306A\u305F\u306E:</string>
+    <string name="listening">\u8074\u53D6\u4E2D\u2026</string>
+    <string name="you_said">\u3042\u306A\u305F\u306E\u767A\u8A00:</string>
+    <string name="microphone_permission_required">\u30DE\u30A4\u30AF\u306E\u6A29\u9650\u304C\u5FC5\u8981\u3067\u3059</string>
+    <string name="voice_error_audio">\u30AA\u30FC\u30C7\u30A3\u30AA\u30A8\u30E9\u30FC</string>
+    <string name="voice_error_client">\u30AF\u30E9\u30A4\u30A2\u30F3\u30C8\u30A8\u30E9\u30FC</string>
+    <string name="voice_error_permission">\u6A29\u9650\u304C\u62D2\u5426\u3055\u308C\u307E\u3057\u305F</string>
+    <string name="voice_error_network">\u30CD\u30C3\u30C8\u30EF\u30FC\u30AF\u30A8\u30E9\u30FC</string>
+    <string name="voice_error_network_timeout">\u30CD\u30C3\u30C8\u30EF\u30FC\u30AF\u30BF\u30A4\u30E0\u30A2\u30A6\u30C8</string>
+    <string name="voice_error_no_match">\u97F3\u58F0\u304C\u691C\u51FA\u3055\u308C\u307E\u305B\u3093\u3067\u3057\u305F</string>
+    <string name="voice_error_recognizer_busy">\u8A8D\u8B58\u30A8\u30F3\u30B8\u30F3\u304C\u30D3\u30B8\u30FC\u3067\u3059</string>
+    <string name="voice_error_server">\u30B5\u30FC\u30D0\u30FC\u30A8\u30E9\u30FC</string>
+    <string name="voice_error_speech_timeout">\u97F3\u58F0\u5165\u529B\u304C\u3042\u308A\u307E\u305B\u3093</string>
+    <string name="voice_error_unknown">\u4E0D\u660E\u306A\u30A8\u30E9\u30FC</string>
+    <string name="voice_input">\u97F3\u58F0\u5165\u529B</string>
+
+    <!-- Onboarding Screen -->
+    <string name="welcome_to_elevatecareers">ElevateCareers\u3078\u3088\u3046\u3053\u305D</string>
+    <string name="get_set_up_dream_job">\u7406\u60F3\u306E\u4ED5\u4E8B\u3092\u898B\u3064\u3051\u308B\u6E96\u5099\u3092\u3057\u307E\u3057\u3087\u3046</string>
+    <string name="get_started">\u59CB\u3081\u308B</string>
+    <string name="skip_setup">\u30BB\u30C3\u30C8\u30A2\u30C3\u30D7\u3092\u30B9\u30AD\u30C3\u30D7</string>
+    <string name="connect_linkedin">LinkedIn\u3092\u63A5\u7D9A</string>
+    <string name="auto_fill_linkedin_info">LinkedIn\u306E\u60C5\u5831\u3067\u30D7\u30ED\u30D5\u30A3\u30FC\u30EB\u3092\u81EA\u52D5\u5165\u529B\u3057\u307E\u3059</string>
+    <string name="connected_as">%s\u3068\u3057\u3066\u63A5\u7D9A\u6E08\u307F</string>
+    <string name="skip_for_now">\u4ECA\u306F\u30B9\u30AD\u30C3\u30D7</string>
+    <string name="upload_your_resume">\u5C65\u6B74\u66F8\u3092\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9</string>
+    <string name="auto_extract_skills">\u30B9\u30AD\u30EB\u3068\u7D4C\u9A13\u3092\u81EA\u52D5\u62BD\u51FA\u3057\u307E\u3059</string>
+    <string name="resume_uploaded_excl">\u5C65\u6B74\u66F8\u304C\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u3055\u308C\u307E\u3057\u305F\uFF01</string>
+    <string name="change_resume">\u5C65\u6B74\u66F8\u3092\u5909\u66F4</string>
+    <string name="complete_setup">\u30BB\u30C3\u30C8\u30A2\u30C3\u30D7\u5B8C\u4E86</string>
+    <string name="continue_with_resume">\u3053\u306E\u5C65\u6B74\u66F8\u3067\u7D9A\u884C</string>
+    <string name="uploading">\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u4E2D\u2026</string>
+    <string name="choose_resume">\u5C65\u6B74\u66F8\u3092\u9078\u629E</string>
+    <string name="upload_later_from_settings">\u5C65\u6B74\u66F8\u306F\u5F8C\u3067\u8A2D\u5B9A\u304B\u3089\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u3067\u304D\u307E\u3059</string>
+    <string name="create_or_upload_resume">\u5C65\u6B74\u66F8\u3092\u4F5C\u6210\u307E\u305F\u306F\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9</string>
+    <string name="how_add_resume">\u5C65\u6B74\u66F8\u3092\u3069\u306E\u3088\u3046\u306B\u8FFD\u52A0\u3057\u307E\u3059\u304B\uFF1F</string>
+    <string name="build_with_ai_voice">AI\u97F3\u58F0\u3067\u4F5C\u6210</string>
+    <string name="new_badge">\u65B0\u898F</string>
+    <string name="chat_with_ai_create_resume">AI\u3068\u4F1A\u8A71\u3057\u3066\u5C65\u6B74\u66F8\u3092\u4F5C\u6210</string>
+    <string name="upload_from_cloud">\u30AF\u30E9\u30A6\u30C9\u304B\u3089\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9</string>
+    <string name="google_drive_dropbox">Google\u30C9\u30E9\u30A4\u30D6\u3001Dropbox\u306A\u3069</string>
+    <string name="device_storage">\u30C7\u30D0\u30A4\u30B9\u30B9\u30C8\u30EC\u30FC\u30B8</string>
+    <string name="browse_local_files">\u30ED\u30FC\u30AB\u30EB\u30D5\u30A1\u30A4\u30EB\u3092\u53C2\u7167</string>
+    <string name="resume_uploaded_success">\u5C65\u6B74\u66F8\u304C\u6B63\u5E38\u306B\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u3055\u308C\u307E\u3057\u305F\uFF01</string>
+    <string name="failed_to_upload">\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u5931\u6557: %s</string>
+    <string name="no_file_selected">\u30D5\u30A1\u30A4\u30EB\u304C\u9078\u629E\u3055\u308C\u3066\u3044\u307E\u305B\u3093</string>
+    <string name="resume_uploaded_filename">\u5C65\u6B74\u66F8\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u6E08\u307F: %s</string>
+    <string name="file_selection_cancelled">\u30D5\u30A1\u30A4\u30EB\u9078\u629E\u304C\u30AD\u30E3\u30F3\u30BB\u30EB\u3055\u308C\u307E\u3057\u305F</string>
+
+    <!-- Profile Screen -->
+    <string name="profile">\u30D7\u30ED\u30D5\u30A3\u30FC\u30EB</string>
+    <string name="no_name">\u540D\u524D\u306A\u3057</string>
+    <string name="resume">\u5C65\u6B74\u66F8</string>
+    <string name="uploaded_date">%s \u306B\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9</string>
+    <string name="view_resume">\u5C65\u6B74\u66F8\u3092\u8868\u793A</string>
+    <string name="delete_resume">\u5C65\u6B74\u66F8\u3092\u524A\u9664</string>
+    <string name="upload_resume">\u5C65\u6B74\u66F8\u3092\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9</string>
+    <string name="edit_profile">\u30D7\u30ED\u30D5\u30A3\u30FC\u30EB\u3092\u7DE8\u96C6</string>
+    <string name="import_from_linkedin">LinkedIn\u304B\u3089\u30A4\u30F3\u30DD\u30FC\u30C8</string>
+    <string name="work_experience">\u8077\u6B74</string>
+    <string name="education">\u5B66\u6B74</string>
+    <string name="degree_fallback">\u5B66\u4F4D</string>
+    <string name="job_preferences">\u5E0C\u671B\u6761\u4EF6</string>
+    <string name="desired_roles">\u5E0C\u671B\u8077\u7A2E</string>
+    <string name="remote_preference">\u30EA\u30E2\u30FC\u30C8\u5E0C\u671B</string>
+    <string name="minimum_salary">\u6700\u4F4E\u5E0C\u671B\u7D66\u4E0E</string>
+
+    <!-- Profile ViewModel messages -->
+    <string name="not_authenticated">\u8A8D\u8A3C\u3055\u308C\u3066\u3044\u307E\u305B\u3093</string>
+    <string name="failed_load_profile">\u30D7\u30ED\u30D5\u30A3\u30FC\u30EB\u306E\u8AAD\u307F\u8FBC\u307F\u306B\u5931\u6557</string>
+    <string name="failed_to_upload_msg">\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u5931\u6557: %s</string>
+    <string name="failed_to_parse">\u89E3\u6790\u5931\u6557: %s</string>
+    <string name="resume_uploaded_skills_exp">\u5C65\u6B74\u66F8\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u6E08\u307F\uFF01\u30B9\u30AD\u30EB%1$d\u4EF6\u3001\u7D4C\u9A13%2$d\u4EF6\u304C\u898B\u3064\u304B\u308A\u307E\u3057\u305F\u3002</string>
+    <string name="upload_failed">\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u5931\u6557: %s</string>
+    <string name="resume_deleted_successfully">\u5C65\u6B74\u66F8\u304C\u6B63\u5E38\u306B\u524A\u9664\u3055\u308C\u307E\u3057\u305F</string>
+    <string name="failed_to_delete">\u524A\u9664\u5931\u6557: %s</string>
+    <string name="profile_updated_successfully">\u30D7\u30ED\u30D5\u30A3\u30FC\u30EB\u304C\u6B63\u5E38\u306B\u66F4\u65B0\u3055\u308C\u307E\u3057\u305F</string>
+    <string name="failed_to_update">\u66F4\u65B0\u5931\u6557: %s</string>
+    <string name="linkedin_imported_successfully">LinkedIn\u30D7\u30ED\u30D5\u30A3\u30FC\u30EB\u304C\u6B63\u5E38\u306B\u30A4\u30F3\u30DD\u30FC\u30C8\u3055\u308C\u307E\u3057\u305F\uFF01</string>
+    <string name="failed_to_import">\u30A4\u30F3\u30DD\u30FC\u30C8\u5931\u6557: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="account">\u30A2\u30AB\u30A6\u30F3\u30C8</string>
+    <string name="app_section">\u30A2\u30D7\u30EA</string>
+    <string name="notifications">\u901A\u77E5</string>
+    <string name="manage_notification_preferences">\u901A\u77E5\u8A2D\u5B9A\u3092\u7BA1\u7406</string>
+    <string name="privacy_security">\u30D7\u30E9\u30A4\u30D0\u30B7\u30FC\u3068\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3</string>
+    <string name="control_data_privacy">\u30C7\u30FC\u30BF\u3068\u30D7\u30E9\u30A4\u30D0\u30B7\u30FC\u3092\u7BA1\u7406</string>
+    <string name="about">\u30A2\u30D7\u30EA\u306B\u3064\u3044\u3066</string>
+    <string name="version_info">\u30D0\u30FC\u30B8\u30E7\u30F3 1.0.0</string>
+    <string name="account_actions">\u30A2\u30AB\u30A6\u30F3\u30C8\u64CD\u4F5C</string>
+    <string name="sign_out">\u30B5\u30A4\u30F3\u30A2\u30A6\u30C8</string>
+    <string name="delete_account">\u30A2\u30AB\u30A6\u30F3\u30C8\u3092\u524A\u9664</string>
+    <string name="permanently_delete_account">\u30A2\u30AB\u30A6\u30F3\u30C8\u3068\u30C7\u30FC\u30BF\u3092\u5B8C\u5168\u306B\u524A\u9664</string>
+    <string name="linkedin_profile">LinkedIn\u30D7\u30ED\u30D5\u30A3\u30FC\u30EB</string>
+    <string name="connected">\u63A5\u7D9A\u6E08\u307F</string>
+    <string name="sign_out_confirmation">\u30B5\u30A4\u30F3\u30A2\u30A6\u30C8\u3057\u3066\u3082\u3088\u308D\u3057\u3044\u3067\u3059\u304B\uFF1F</string>
+    <string name="delete_account_confirmation">\u30A2\u30AB\u30A6\u30F3\u30C8\u3092\u524A\u9664\u3057\u3066\u3082\u3088\u308D\u3057\u3044\u3067\u3059\u304B\uFF1F</string>
+    <string name="delete_account_warning">\u3053\u306E\u64CD\u4F5C\u306F\u53D6\u308A\u6D88\u305B\u307E\u305B\u3093\u3002\u3059\u3079\u3066\u306E\u30C7\u30FC\u30BF\u304C\u5B8C\u5168\u306B\u524A\u9664\u3055\u308C\u307E\u3059\u3002</string>
+
+    <!-- AI Resume Builder Screen -->
+    <string name="ai_resume_builder">AI\u5C65\u6B74\u66F8\u30D3\u30EB\u30C0\u30FC</string>
+    <string name="percent_complete">%d%%\u5B8C\u4E86</string>
+    <string name="start_over">\u6700\u521D\u304B\u3089\u3084\u308A\u76F4\u3059</string>
+    <string name="share_resume">\u5C65\u6B74\u66F8\u3092\u5171\u6709</string>
+    <string name="resume_ready">\u5C65\u6B74\u66F8\u5B8C\u6210\uFF01</string>
+    <string name="download_pdf">PDF\u3092\u30C0\u30A6\u30F3\u30ED\u30FC\u30C9</string>
+    <string name="generating_resume">\u5C65\u6B74\u66F8\u3092\u4F5C\u6210\u4E2D\u2026</string>
+    <string name="please_wait_pdf">PDF\u3092\u4F5C\u6210\u4E2D\u3067\u3059\u3002\u304A\u5F85\u3061\u304F\u3060\u3055\u3044\u2026</string>
+    <string name="resume_complete">\u5C65\u6B74\u66F8\u5B8C\u6210\uFF01</string>
+    <string name="your_resume_ready">\u30D7\u30ED\u30D5\u30A7\u30C3\u30B7\u30E7\u30CA\u30EB\u306A\u5C65\u6B74\u66F8\u304C\u5B8C\u6210\u3057\u307E\u3057\u305F</string>
+    <string name="resume_summary">\u5C65\u6B74\u66F8\u306E\u6982\u8981</string>
+    <string name="pdf_generated_saved">PDF\u304C\u4F5C\u6210\u3055\u308C\u30A2\u30AB\u30A6\u30F3\u30C8\u306B\u4FDD\u5B58\u3055\u308C\u307E\u3057\u305F</string>
+    <string name="name_label">\u540D\u524D</string>
+    <string name="email_label">\u30E1\u30FC\u30EB</string>
+    <string name="education_label">\u5B66\u6B74</string>
+    <string name="experience_label">\u7D4C\u9A13</string>
+    <string name="skills_label">\u30B9\u30AD\u30EB</string>
+    <string name="entry_count">%d\u4EF6</string>
+    <string name="skills_count">%d\u30B9\u30AD\u30EB</string>
+    <string name="resume_completed_placeholder">\u5C65\u6B74\u66F8\u5B8C\u6210\uFF01</string>
+    <string name="type_your_response">\u56DE\u7B54\u3092\u5165\u529B\u2026</string>
+
+    <!-- Resume Options Screen -->
+    <string name="create_your_resume">\u5C65\u6B74\u66F8\u3092\u4F5C\u6210</string>
+    <string name="how_create_resume">\u5C65\u6B74\u66F8\u3092\u3069\u306E\u3088\u3046\u306B\u4F5C\u6210\u3057\u307E\u3059\u304B\uFF1F</string>
+    <string name="choose_method">\u6700\u9069\u306A\u65B9\u6CD5\u3092\u9078\u3093\u3067\u304F\u3060\u3055\u3044</string>
+    <string name="build_with_ai_voice_desc">AI\u30A2\u30B7\u30B9\u30BF\u30F3\u30C8\u3068\u4F1A\u8A71\u3057\u307E\u3057\u3087\u3046\u3002\u81EA\u7136\u306B\u8A71\u3059\u3060\u3051\u3067\u5C65\u6B74\u66F8\u3092\u4F5C\u6210\u3057\u307E\u3059\u3002</string>
+    <string name="recommended">\u304A\u3059\u3059\u3081</string>
+    <string name="upload_existing_resume">\u65E2\u5B58\u306E\u5C65\u6B74\u66F8\u3092\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9</string>
+    <string name="upload_existing_resume_desc">\u5C65\u6B74\u66F8\u3092\u304A\u6301\u3061\u3067\u3059\u304B\uFF1F\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u3059\u308C\u3070\u89E3\u6790\u3057\u3066\u6539\u5584\u3057\u307E\u3059\u3002</string>
+    <string name="enter_manually">\u624B\u52D5\u3067\u5165\u529B</string>
+    <string name="enter_manually_desc">\u5F93\u6765\u306E\u30D5\u30A9\u30FC\u30E0\u306B\u8A18\u5165\u3057\u3066\u5C65\u6B74\u66F8\u3092\u30BC\u30ED\u304B\u3089\u4F5C\u6210\u3057\u307E\u3059\u3002</string>
+
+    <!-- Resume Preview Screen -->
+    <string name="resume_preview">\u5C65\u6B74\u66F8\u30D7\u30EC\u30D3\u30E5\u30FC</string>
+    <string name="personal_information">\u500B\u4EBA\u60C5\u5831</string>
+    <string name="graduated">\u5352\u696D: %s</string>
+
+    <!-- Custom File Picker -->
+    <string name="select_resume">\u5C65\u6B74\u66F8\u3092\u9078\u629E</string>
+    <string name="up_one_level">\u4E00\u3064\u4E0A\u306E\u968E\u5C64\u3078</string>
+    <string name="no_pdf_files_found">PDF\u30D5\u30A1\u30A4\u30EB\u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093</string>
+    <string name="open_folder">\u30D5\u30A9\u30EB\u30C0\u30FC\u3092\u958B\u304F</string>
+
+    <!-- ViewModel messages -->
+    <string name="failed_to_load_jobs">\u6C42\u4EBA\u306E\u8AAD\u307F\u8FBC\u307F\u306B\u5931\u6557</string>
+    <string name="failed_to_load_data">\u30C7\u30FC\u30BF\u306E\u8AAD\u307F\u8FBC\u307F\u306B\u5931\u6557</string>
+    <string name="no_active_conversation">\u30A2\u30AF\u30C6\u30A3\u30D6\u306A\u4F1A\u8A71\u304C\u3042\u308A\u307E\u305B\u3093\u3002\u518D\u8D77\u52D5\u3057\u3066\u304F\u3060\u3055\u3044\u3002</string>
+    <string name="conversation_expired">\u4F1A\u8A71\u304C\u671F\u9650\u5207\u308C\u3067\u3059\u3002\u65B0\u3057\u3044\u4F1A\u8A71\u3092\u958B\u59CB\u3057\u3066\u304F\u3060\u3055\u3044\u3002</string>
+    <string name="failed_start_conversation">\u4F1A\u8A71\u306E\u958B\u59CB\u306B\u5931\u6557</string>
+    <string name="failed_send_message">\u30E1\u30C3\u30BB\u30FC\u30B8\u306E\u9001\u4FE1\u306B\u5931\u6557</string>
+    <string name="speech_recognition_error">\u97F3\u58F0\u8A8D\u8B58\u30A8\u30E9\u30FC: %d</string>
+    <string name="tell_me_about_yourself">\u81EA\u5DF1\u7D39\u4ECB\u3092\u3057\u3066\u304F\u3060\u3055\u3044\u2026</string>
+</resources>

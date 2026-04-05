@@ -8,10 +8,12 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.kreativekoala.elevatecareers.R
 
 /**
  * Resume Options Screen - Entry point for resume creation
@@ -25,10 +27,10 @@ fun ResumeOptionsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Create Your Resume") },
+                title = { Text(stringResource(R.string.create_your_resume)) },
                 navigationIcon = {
                     IconButton(onClick = { navController.navigateUp() }) {
-                        Icon(Icons.Default.ArrowBack, "Back")
+                        Icon(Icons.Default.ArrowBack, stringResource(R.string.back))
                     }
                 }
             )
@@ -44,14 +46,14 @@ fun ResumeOptionsScreen(
         ) {
             // Header
             Text(
-                text = "How would you like to create your resume?",
+                text = stringResource(R.string.how_create_resume),
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center
             )
 
             Text(
-                text = "Choose the method that works best for you",
+                text = stringResource(R.string.choose_method),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center
@@ -62,9 +64,9 @@ fun ResumeOptionsScreen(
             // Option 1: AI Voice Builder (Recommended)
             ResumeOptionCard(
                 icon = Icons.Default.Mic,
-                title = "Build with AI Voice",
-                description = "Have a conversation with our AI assistant. Just speak naturally and we'll create your resume.",
-                badge = "RECOMMENDED",
+                title = stringResource(R.string.build_with_ai_voice),
+                description = stringResource(R.string.build_with_ai_voice_desc),
+                badge = stringResource(R.string.recommended),
                 onClick = {
                     navController.navigate("ai-resume-builder")
                 }
@@ -73,8 +75,8 @@ fun ResumeOptionsScreen(
             // Option 2: Upload Resume
             ResumeOptionCard(
                 icon = Icons.Default.Upload,
-                title = "Upload Existing Resume",
-                description = "Have a resume already? Upload it and we'll parse and improve it.",
+                title = stringResource(R.string.upload_existing_resume),
+                description = stringResource(R.string.upload_existing_resume_desc),
                 onClick = {
                     navController.navigate("upload-resume")
                 }
@@ -83,8 +85,8 @@ fun ResumeOptionsScreen(
             // Option 3: Manual Entry
             ResumeOptionCard(
                 icon = Icons.Default.Edit,
-                title = "Enter Manually",
-                description = "Fill out a traditional form to create your resume from scratch.",
+                title = stringResource(R.string.enter_manually),
+                description = stringResource(R.string.enter_manually_desc),
                 onClick = {
                     navController.navigate("manual-resume")
                 }

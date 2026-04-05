@@ -14,9 +14,11 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.kreativekoala.elevatecareers.R
 import java.io.InputStream
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -53,10 +55,10 @@ fun ProfileScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Profile") },
+                title = { Text(stringResource(R.string.profile)) },
                 actions = {
                     IconButton(onClick = { /* Settings */ }) {
-                        Icon(Icons.Default.Settings, contentDescription = "Settings")
+                        Icon(Icons.Default.Settings, contentDescription = stringResource(R.string.settings))
                     }
                 }
             )
@@ -186,7 +188,7 @@ fun ProfileHeader(profile: com.kreativekoala.elevatecareers.data.UserProfile) {
 
         // Name
         Text(
-            text = profile.fullName ?: "No Name",
+            text = profile.fullName ?: stringResource(R.string.no_name),
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold
         )
@@ -237,7 +239,7 @@ fun ResumeSection(
             modifier = Modifier.padding(16.dp)
         ) {
             Text(
-                text = "Resume",
+                text = stringResource(R.string.resume),
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold
             )
@@ -265,7 +267,7 @@ fun ResumeSection(
                                 fontWeight = FontWeight.Medium
                             )
                             Text(
-                                text = "Uploaded ${resume.uploadedAt.take(10)}",
+                                text = stringResource(R.string.uploaded_date, resume.uploadedAt.take(10)),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
@@ -275,13 +277,13 @@ fun ResumeSection(
                             IconButton(onClick = onViewClick) {
                                 Icon(
                                     imageVector = Icons.Default.RemoveRedEye,
-                                    contentDescription = "View Resume"
+                                    contentDescription = stringResource(R.string.view_resume)
                                 )
                             }
                             IconButton(onClick = onDeleteClick) {
                                 Icon(
                                     imageVector = Icons.Default.Delete,
-                                    contentDescription = "Delete Resume",
+                                    contentDescription = stringResource(R.string.delete_resume),
                                     tint = MaterialTheme.colorScheme.error
                                 )
                             }
@@ -299,7 +301,7 @@ fun ResumeSection(
                         contentDescription = null
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text("Upload Resume")
+                    Text(stringResource(R.string.upload_resume))
                 }
             }
         }
@@ -320,7 +322,7 @@ fun ActionButtons(
         ) {
             Icon(Icons.Default.Edit, contentDescription = null)
             Spacer(modifier = Modifier.width(8.dp))
-            Text("Edit Profile")
+            Text(stringResource(R.string.edit_profile))
         }
 
         OutlinedButton(
@@ -329,7 +331,7 @@ fun ActionButtons(
         ) {
             Icon(Icons.Default.Link, contentDescription = null)
             Spacer(modifier = Modifier.width(8.dp))
-            Text("Import from LinkedIn")
+            Text(stringResource(R.string.import_from_linkedin))
         }
     }
 }
@@ -338,7 +340,7 @@ fun ActionButtons(
 fun SkillsSection(skills: List<String>) {
     Column {
         Text(
-            text = "Skills",
+            text = stringResource(R.string.skills),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold
         )
@@ -363,7 +365,7 @@ fun SkillsSection(skills: List<String>) {
 fun WorkExperienceSection(experiences: List<com.kreativekoala.elevatecareers.data.WorkExperience>) {
     Column {
         Text(
-            text = "Work Experience",
+            text = stringResource(R.string.work_experience),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold
         )
@@ -403,7 +405,7 @@ fun WorkExperienceSection(experiences: List<com.kreativekoala.elevatecareers.dat
 fun EducationSection(education: List<com.kreativekoala.elevatecareers.data.Education>) {
     Column {
         Text(
-            text = "Education",
+            text = stringResource(R.string.education),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold
         )
@@ -420,7 +422,7 @@ fun EducationSection(education: List<com.kreativekoala.elevatecareers.data.Educa
                     modifier = Modifier.padding(12.dp)
                 ) {
                     Text(
-                        text = edu.degree ?: "Degree",
+                        text = edu.degree ?: stringResource(R.string.degree_fallback),
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold
                     )
@@ -445,7 +447,7 @@ fun EducationSection(education: List<com.kreativekoala.elevatecareers.data.Educa
 fun JobPreferencesSection(profile: com.kreativekoala.elevatecareers.data.UserProfile) {
     Column {
         Text(
-            text = "Job Preferences",
+            text = stringResource(R.string.job_preferences),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold
         )
@@ -457,7 +459,7 @@ fun JobPreferencesSection(profile: com.kreativekoala.elevatecareers.data.UserPro
                 profile.desiredRoles?.let { roles ->
                     PreferenceRow(
                         icon = Icons.Default.Work,
-                        label = "Desired Roles",
+                        label = stringResource(R.string.desired_roles),
                         value = roles.joinToString(", ")
                     )
                 }
@@ -465,7 +467,7 @@ fun JobPreferencesSection(profile: com.kreativekoala.elevatecareers.data.UserPro
                 profile.remotePreference?.let { pref ->
                     PreferenceRow(
                         icon = Icons.Default.LocationOn,
-                        label = "Remote Preference",
+                        label = stringResource(R.string.remote_preference),
                         value = pref.replace("_", " ").capitalize()
                     )
                 }
@@ -473,7 +475,7 @@ fun JobPreferencesSection(profile: com.kreativekoala.elevatecareers.data.UserPro
                 profile.desiredSalaryMin?.let { salary ->
                     PreferenceRow(
                         icon = Icons.Default.AttachMoney,
-                        label = "Minimum Salary",
+                        label = stringResource(R.string.minimum_salary),
                         value = "$${salary / 1000}K"
                     )
                 }

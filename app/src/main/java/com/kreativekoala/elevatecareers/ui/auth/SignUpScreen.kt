@@ -9,11 +9,13 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.kreativekoala.elevatecareers.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -49,10 +51,10 @@ fun SignUpScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Sign Up") },
+                title = { Text(stringResource(R.string.sign_up)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back))
                     }
                 }
             )
@@ -70,13 +72,13 @@ fun SignUpScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             Text(
-                text = "Create your account",
+                text = stringResource(R.string.create_your_account),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold
             )
 
             Text(
-                text = "Join ElevateCareers to find your next opportunity",
+                text = stringResource(R.string.join_elevatecareers),
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -87,7 +89,7 @@ fun SignUpScreen(
             OutlinedTextField(
                 value = email,
                 onValueChange = { email = it },
-                label = { Text("Email") },
+                label = { Text(stringResource(R.string.email)) },
                 leadingIcon = {
                     Icon(Icons.Default.Email, contentDescription = null)
                 },
@@ -100,7 +102,7 @@ fun SignUpScreen(
             OutlinedTextField(
                 value = password,
                 onValueChange = { password = it },
-                label = { Text("Password") },
+                label = { Text(stringResource(R.string.password)) },
                 leadingIcon = {
                     Icon(Icons.Default.Lock, contentDescription = null)
                 },
@@ -108,7 +110,7 @@ fun SignUpScreen(
                     IconButton(onClick = { passwordVisible = !passwordVisible }) {
                         Icon(
                             imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
-                            contentDescription = if (passwordVisible) "Hide password" else "Show password"
+                            contentDescription = if (passwordVisible) stringResource(R.string.hide_password) else stringResource(R.string.show_password)
                         )
                     }
                 },
@@ -116,7 +118,7 @@ fun SignUpScreen(
                 singleLine = true,
                 enabled = !uiState.isLoading,
                 supportingText = {
-                    Text("At least 6 characters")
+                    Text(stringResource(R.string.at_least_6_characters))
                 },
                 isError = password.isNotBlank() && password.length < 6,
                 modifier = Modifier.fillMaxWidth()
@@ -126,7 +128,7 @@ fun SignUpScreen(
             OutlinedTextField(
                 value = confirmPassword,
                 onValueChange = { confirmPassword = it },
-                label = { Text("Confirm Password") },
+                label = { Text(stringResource(R.string.confirm_password)) },
                 leadingIcon = {
                     Icon(Icons.Default.Lock, contentDescription = null)
                 },
@@ -134,7 +136,7 @@ fun SignUpScreen(
                     IconButton(onClick = { confirmPasswordVisible = !confirmPasswordVisible }) {
                         Icon(
                             imageVector = if (confirmPasswordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
-                            contentDescription = if (confirmPasswordVisible) "Hide password" else "Show password"
+                            contentDescription = if (confirmPasswordVisible) stringResource(R.string.hide_password) else stringResource(R.string.show_password)
                         )
                     }
                 },
@@ -144,7 +146,7 @@ fun SignUpScreen(
                 isError = confirmPassword.isNotBlank() && !passwordsMatch,
                 supportingText = {
                     if (confirmPassword.isNotBlank() && !passwordsMatch) {
-                        Text("Passwords don't match", color = MaterialTheme.colorScheme.error)
+                        Text(stringResource(R.string.passwords_dont_match), color = MaterialTheme.colorScheme.error)
                     }
                 },
                 modifier = Modifier.fillMaxWidth()
@@ -183,7 +185,7 @@ fun SignUpScreen(
                         color = MaterialTheme.colorScheme.onPrimary
                     )
                 } else {
-                    Text("Create Account")
+                    Text(stringResource(R.string.create_account))
                 }
             }
 
@@ -193,11 +195,11 @@ fun SignUpScreen(
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = "Already have an account? ",
+                    text = stringResource(R.string.already_have_account),
                     style = MaterialTheme.typography.bodyMedium
                 )
                 TextButton(onClick = onNavigateToSignIn) {
-                    Text("Sign In")
+                    Text(stringResource(R.string.sign_in))
                 }
             }
         }
