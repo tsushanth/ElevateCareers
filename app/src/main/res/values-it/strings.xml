@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Elevate Careers</string>
+
+    <!-- Common / Shared -->
+    <string name="back">Indietro</string>
+    <string name="cancel">Annulla</string>
+    <string name="retry">Riprova</string>
+    <string name="close">Chiudi</string>
+    <string name="search">Cerca</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Conferma password</string>
+    <string name="loading">Caricamento\u2026</string>
+    <string name="dismiss">Chiudi</string>
+    <string name="save">Salva</string>
+    <string name="apply">Candidati</string>
+    <string name="edit">Modifica</string>
+    <string name="delete">Elimina</string>
+    <string name="share">Condividi</string>
+    <string name="view">Visualizza</string>
+    <string name="download">Scarica</string>
+    <string name="next">Avanti</string>
+    <string name="done">Fatto</string>
+    <string name="send">Invia</string>
+    <string name="refresh">Aggiorna</string>
+    <string name="stop">Ferma</string>
+    <string name="start">Avvia</string>
+    <string name="continue_text">Continua</string>
+    <string name="skills">Competenze</string>
+    <string name="remote">Da remoto</string>
+
+    <!-- Sign In Screen -->
+    <string name="elevate_careers_title">ElevateCareers</string>
+    <string name="sign_in_to_continue">Accedi per continuare</string>
+    <string name="complete_linkedin_login_browser">Completa l\'accesso a LinkedIn nel tuo browser</string>
+    <string name="google_sign_in_failed">Accesso Google fallito: %s</string>
+    <string name="sign_in">Accedi</string>
+    <string name="dont_have_account">Non hai un account? </string>
+    <string name="sign_up">Registrati</string>
+    <string name="continue_without_signing_in">Continua senza accedere</string>
+    <string name="or">o</string>
+    <string name="hide_password">Nascondi password</string>
+    <string name="show_password">Mostra password</string>
+    <string name="continue_with_google">Continua con Google</string>
+    <string name="google">Google</string>
+    <string name="continue_with_linkedin">Continua con LinkedIn</string>
+    <string name="linkedin">LinkedIn</string>
+
+    <!-- Sign Up Screen -->
+    <string name="create_your_account">Crea il tuo account</string>
+    <string name="join_elevatecareers">Unisciti a ElevateCareers per trovare la tua prossima opportunit\u00E0</string>
+    <string name="at_least_6_characters">Almeno 6 caratteri</string>
+    <string name="passwords_dont_match">Le password non corrispondono</string>
+    <string name="create_account">Crea account</string>
+    <string name="already_have_account">Hai gi\u00E0 un account? </string>
+
+    <!-- Auth ViewModel errors -->
+    <string name="google_sign_in_failed_generic">Accesso Google fallito</string>
+    <string name="linkedin_email_required">L\'e-mail di LinkedIn \u00E8 obbligatoria</string>
+    <string name="linkedin_sign_in_failed">Accesso LinkedIn fallito: %s</string>
+    <string name="sign_in_failed">Accesso fallito</string>
+    <string name="sign_up_failed">Registrazione fallita</string>
+    <string name="delete_account_failed">Eliminazione account fallita</string>
+
+    <!-- MainActivity -->
+    <string name="linkedin_connected">LinkedIn collegato: %s</string>
+    <string name="linkedin_email_required_error">L\'e-mail di LinkedIn \u00E8 obbligatoria</string>
+    <string name="failed_fetch_profile">Impossibile recuperare il profilo: %s</string>
+    <string name="linkedin_login_failed">Accesso LinkedIn fallito: %s</string>
+    <string name="error_generic">Errore: %s</string>
+    <string name="no_authorization_code">Nessun codice di autorizzazione ricevuto</string>
+    <string name="upload_resume_coming_soon">Carica curriculum - Prossimamente</string>
+    <string name="manual_entry_coming_soon">Inserimento manuale - Prossimamente</string>
+
+    <!-- Job List Screen -->
+    <string name="jobs_title">Offerte di lavoro</string>
+    <string name="close_search">Chiudi ricerca</string>
+    <string name="settings">Impostazioni</string>
+    <string name="search_jobs_placeholder">Cerca lavoro per titolo, azienda o localit\u00E0</string>
+    <string name="clear">Cancella</string>
+    <string name="full_time">Tempo pieno</string>
+    <string name="part_time">Part-time</string>
+    <string name="contract">Contratto</string>
+    <string name="internship">Stage</string>
+    <string name="jobs_count">%d offerte</string>
+    <string name="an_error_occurred">Si \u00E8 verificato un errore</string>
+    <string name="no_jobs_found">Nessuna offerta trovata</string>
+    <string name="try_adjusting_search">Prova a modificare la ricerca o i filtri</string>
+    <string name="clear_filters">Cancella filtri</string>
+    <string name="promoted">Promosso</string>
+    <string name="company_logo">Logo di %s</string>
+
+    <!-- Job Detail Screen -->
+    <string name="about_the_job">Informazioni sull\'offerta</string>
+    <string name="people_clicked_apply">%1$s \u00B7 %2$s \u00B7 67 persone hanno cliccato su candidati</string>
+    <string name="promoted_by_hirer">Promosso dal datore di lavoro \u00B7 Risposte gestite al di fuori di LinkedIn</string>
+    <string name="remote_check">\u2713 Da remoto</string>
+    <string name="type_check">\u2713 %s</string>
+    <string name="location_not_specified">Localit\u00E0 non specificata</string>
+
+    <!-- Job Model time strings -->
+    <string name="recently_posted">Pubblicato di recente</string>
+    <string name="posted_today">Pubblicato oggi</string>
+    <string name="posted_1_day_ago">Pubblicato 1 giorno fa</string>
+    <string name="posted_days_ago">Pubblicato %d giorni fa</string>
+    <string name="posted_1_week_ago">Pubblicato 1 settimana fa</string>
+    <string name="posted_weeks_ago">Pubblicato %d settimane fa</string>
+    <string name="posted_months_ago">Pubblicato %d mesi fa</string>
+
+    <!-- Job Application Screen -->
+    <string name="failed_load_autofill">Impossibile caricare i dati di compilazione automatica</string>
+    <string name="auto_filling_application">Compilazione automatica della candidatura\u2026</string>
+    <string name="fill_with_voice">Compila con la voce (%d)</string>
+    <string name="voice">Voce</string>
+
+    <!-- Voice Input Dialog -->
+    <string name="fill_with_voice_title">Compila con la voce</string>
+    <string name="field_x_of_y">Campo %1$d di %2$d</string>
+    <string name="what_is_your">Qual \u00E8 il tuo:</string>
+    <string name="listening">In ascolto\u2026</string>
+    <string name="you_said">Hai detto:</string>
+    <string name="microphone_permission_required">Autorizzazione microfono necessaria</string>
+    <string name="voice_error_audio">Errore audio</string>
+    <string name="voice_error_client">Errore client</string>
+    <string name="voice_error_permission">Autorizzazione negata</string>
+    <string name="voice_error_network">Errore di rete</string>
+    <string name="voice_error_network_timeout">Timeout di rete</string>
+    <string name="voice_error_no_match">Nessuna voce rilevata</string>
+    <string name="voice_error_recognizer_busy">Riconoscitore occupato</string>
+    <string name="voice_error_server">Errore del server</string>
+    <string name="voice_error_speech_timeout">Nessun input vocale</string>
+    <string name="voice_error_unknown">Errore sconosciuto</string>
+    <string name="voice_input">Input vocale</string>
+
+    <!-- Onboarding Screen -->
+    <string name="welcome_to_elevatecareers">Benvenuto su ElevateCareers</string>
+    <string name="get_set_up_dream_job">Prepariamoci a trovare il lavoro dei tuoi sogni</string>
+    <string name="get_started">Inizia</string>
+    <string name="skip_setup">Salta la configurazione</string>
+    <string name="connect_linkedin">Collega LinkedIn</string>
+    <string name="auto_fill_linkedin_info">Compileremo automaticamente il tuo profilo con le informazioni di LinkedIn</string>
+    <string name="connected_as">Collegato come %s</string>
+    <string name="skip_for_now">Salta per ora</string>
+    <string name="upload_your_resume">Carica il tuo curriculum</string>
+    <string name="auto_extract_skills">Estrarremo automaticamente le tue competenze e la tua esperienza</string>
+    <string name="resume_uploaded_excl">Curriculum caricato!</string>
+    <string name="change_resume">Cambia curriculum</string>
+    <string name="complete_setup">Completa configurazione</string>
+    <string name="continue_with_resume">Continua con questo curriculum</string>
+    <string name="uploading">Caricamento\u2026</string>
+    <string name="choose_resume">Scegli curriculum</string>
+    <string name="upload_later_from_settings">Puoi sempre caricare il tuo curriculum pi\u00F9 tardi dalle Impostazioni</string>
+    <string name="create_or_upload_resume">Crea o carica curriculum</string>
+    <string name="how_add_resume">Come desideri aggiungere il tuo curriculum?</string>
+    <string name="build_with_ai_voice">Crea con voce IA</string>
+    <string name="new_badge">NUOVO</string>
+    <string name="chat_with_ai_create_resume">Chatta con l\'IA per creare il tuo curriculum</string>
+    <string name="upload_from_cloud">Carica dal cloud</string>
+    <string name="google_drive_dropbox">Google Drive, Dropbox, ecc.</string>
+    <string name="device_storage">Archiviazione dispositivo</string>
+    <string name="browse_local_files">Sfoglia file locali</string>
+    <string name="resume_uploaded_success">Curriculum caricato con successo!</string>
+    <string name="failed_to_upload">Caricamento fallito: %s</string>
+    <string name="no_file_selected">Nessun file selezionato</string>
+    <string name="resume_uploaded_filename">Curriculum caricato: %s</string>
+    <string name="file_selection_cancelled">Selezione file annullata</string>
+
+    <!-- Profile Screen -->
+    <string name="profile">Profilo</string>
+    <string name="no_name">Senza nome</string>
+    <string name="resume">Curriculum</string>
+    <string name="uploaded_date">Caricato il %s</string>
+    <string name="view_resume">Visualizza curriculum</string>
+    <string name="delete_resume">Elimina curriculum</string>
+    <string name="upload_resume">Carica curriculum</string>
+    <string name="edit_profile">Modifica profilo</string>
+    <string name="import_from_linkedin">Importa da LinkedIn</string>
+    <string name="work_experience">Esperienza lavorativa</string>
+    <string name="education">Istruzione</string>
+    <string name="degree_fallback">Laurea</string>
+    <string name="job_preferences">Preferenze di lavoro</string>
+    <string name="desired_roles">Ruoli desiderati</string>
+    <string name="remote_preference">Preferenza da remoto</string>
+    <string name="minimum_salary">Stipendio minimo</string>
+
+    <!-- Profile ViewModel messages -->
+    <string name="not_authenticated">Non autenticato</string>
+    <string name="failed_load_profile">Impossibile caricare il profilo</string>
+    <string name="failed_to_upload_msg">Caricamento fallito: %s</string>
+    <string name="failed_to_parse">Analisi fallita: %s</string>
+    <string name="resume_uploaded_skills_exp">Curriculum caricato! Trovate %1$d competenze e %2$d esperienze.</string>
+    <string name="upload_failed">Caricamento fallito: %s</string>
+    <string name="resume_deleted_successfully">Curriculum eliminato con successo</string>
+    <string name="failed_to_delete">Eliminazione fallita: %s</string>
+    <string name="profile_updated_successfully">Profilo aggiornato con successo</string>
+    <string name="failed_to_update">Aggiornamento fallito: %s</string>
+    <string name="linkedin_imported_successfully">Profilo LinkedIn importato con successo!</string>
+    <string name="failed_to_import">Importazione fallita: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="account">Account</string>
+    <string name="app_section">App</string>
+    <string name="notifications">Notifiche</string>
+    <string name="manage_notification_preferences">Gestisci le preferenze di notifica</string>
+    <string name="privacy_security">Privacy e sicurezza</string>
+    <string name="control_data_privacy">Controlla i tuoi dati e la tua privacy</string>
+    <string name="about">Informazioni</string>
+    <string name="version_info">Versione 1.0.0</string>
+    <string name="account_actions">Azioni account</string>
+    <string name="sign_out">Esci</string>
+    <string name="delete_account">Elimina account</string>
+    <string name="permanently_delete_account">Elimina permanentemente il tuo account e i tuoi dati</string>
+    <string name="linkedin_profile">Profilo LinkedIn</string>
+    <string name="connected">Collegato</string>
+    <string name="sign_out_confirmation">Sei sicuro di voler uscire?</string>
+    <string name="delete_account_confirmation">Sei sicuro di voler eliminare il tuo account?</string>
+    <string name="delete_account_warning">Questa azione non pu\u00F2 essere annullata. Tutti i tuoi dati verranno eliminati permanentemente.</string>
+
+    <!-- AI Resume Builder Screen -->
+    <string name="ai_resume_builder">Creatore di Curriculum IA</string>
+    <string name="percent_complete">%d%% completato</string>
+    <string name="start_over">Ricomincia</string>
+    <string name="share_resume">Condividi curriculum</string>
+    <string name="resume_ready">Curriculum pronto!</string>
+    <string name="download_pdf">Scarica PDF</string>
+    <string name="generating_resume">Generazione del curriculum\u2026</string>
+    <string name="please_wait_pdf">Attendi mentre creiamo il tuo PDF\u2026</string>
+    <string name="resume_complete">Curriculum completo!</string>
+    <string name="your_resume_ready">Il tuo curriculum professionale \u00E8 pronto</string>
+    <string name="resume_summary">Riepilogo del curriculum</string>
+    <string name="pdf_generated_saved">PDF generato e salvato nel tuo account</string>
+    <string name="name_label">Nome</string>
+    <string name="email_label">E-mail</string>
+    <string name="education_label">Istruzione</string>
+    <string name="experience_label">Esperienza</string>
+    <string name="skills_label">Competenze</string>
+    <string name="entry_count">%d voce</string>
+    <string name="skills_count">%d competenze</string>
+    <string name="resume_completed_placeholder">Curriculum completato!</string>
+    <string name="type_your_response">Scrivi la tua risposta\u2026</string>
+
+    <!-- Resume Options Screen -->
+    <string name="create_your_resume">Crea il tuo curriculum</string>
+    <string name="how_create_resume">Come desideri creare il tuo curriculum?</string>
+    <string name="choose_method">Scegli il metodo che funziona meglio per te</string>
+    <string name="build_with_ai_voice_desc">Conversa con il nostro assistente IA. Parla naturalmente e creeremo il tuo curriculum.</string>
+    <string name="recommended">CONSIGLIATO</string>
+    <string name="upload_existing_resume">Carica curriculum esistente</string>
+    <string name="upload_existing_resume_desc">Hai gi\u00E0 un curriculum? Caricalo e lo analizzeremo e miglioreremo.</string>
+    <string name="enter_manually">Inserisci manualmente</string>
+    <string name="enter_manually_desc">Compila un modulo tradizionale per creare il tuo curriculum da zero.</string>
+
+    <!-- Resume Preview Screen -->
+    <string name="resume_preview">Anteprima curriculum</string>
+    <string name="personal_information">Informazioni personali</string>
+    <string name="graduated">Laureato: %s</string>
+
+    <!-- Custom File Picker -->
+    <string name="select_resume">Seleziona curriculum</string>
+    <string name="up_one_level">Sali di un livello</string>
+    <string name="no_pdf_files_found">Nessun file PDF trovato</string>
+    <string name="open_folder">Apri cartella</string>
+
+    <!-- ViewModel messages -->
+    <string name="failed_to_load_jobs">Impossibile caricare le offerte di lavoro</string>
+    <string name="failed_to_load_data">Impossibile caricare i dati</string>
+    <string name="no_active_conversation">Nessuna conversazione attiva. Riavvia per favore.</string>
+    <string name="conversation_expired">Conversazione scaduta. Avvia una nuova conversazione.</string>
+    <string name="failed_start_conversation">Impossibile avviare la conversazione</string>
+    <string name="failed_send_message">Impossibile inviare il messaggio</string>
+    <string name="speech_recognition_error">Errore di riconoscimento vocale: %d</string>
+    <string name="tell_me_about_yourself">Parlami di te\u2026</string>
+</resources>

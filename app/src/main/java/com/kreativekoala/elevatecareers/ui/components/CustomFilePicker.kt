@@ -11,8 +11,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.kreativekoala.elevatecareers.R
 import java.io.File
 
 /**
@@ -46,7 +48,7 @@ fun CustomFilePicker(
             TopAppBar(
                 title = {
                     Column {
-                        Text("Select Resume")
+                        Text(stringResource(R.string.select_resume))
                         Text(
                             text = currentPath.name,
                             style = MaterialTheme.typography.bodySmall,
@@ -58,7 +60,7 @@ fun CustomFilePicker(
                     IconButton(onClick = onDismiss) {
                         Icon(
                             imageVector = Icons.Default.Close,
-                            contentDescription = "Close"
+                            contentDescription = stringResource(R.string.close)
                         )
                     }
                 },
@@ -72,7 +74,7 @@ fun CustomFilePicker(
                         ) {
                             Icon(
                                 imageVector = Icons.Default.ArrowUpward,
-                                contentDescription = "Up one level"
+                                contentDescription = stringResource(R.string.up_one_level)
                             )
                         }
                     }
@@ -144,7 +146,7 @@ fun CustomFilePicker(
                                 )
                                 Spacer(modifier = Modifier.height(8.dp))
                                 Text(
-                                    text = "No PDF files found",
+                                    text = stringResource(R.string.no_pdf_files_found),
                                     style = MaterialTheme.typography.bodyMedium,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
@@ -206,7 +208,7 @@ private fun FileItem(
         if (file.isDirectory) {
             Icon(
                 imageVector = Icons.Default.ChevronRight,
-                contentDescription = "Open folder",
+                contentDescription = stringResource(R.string.open_folder),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }

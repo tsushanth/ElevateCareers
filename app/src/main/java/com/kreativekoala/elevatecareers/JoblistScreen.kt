@@ -15,10 +15,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import com.kreativekoala.elevatecareers.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -36,13 +38,13 @@ fun JobListScreen(
         topBar = {
             Column {
                 TopAppBar(
-                    title = { Text("Jobs") },
+                    title = { Text(stringResource(R.string.jobs_title)) },
                     actions = {
                         // Search button - toggles search bar
                         IconButton(onClick = { showSearchBar = !showSearchBar }) {
                             Icon(
                                 imageVector = if (showSearchBar) Icons.Default.Close else Icons.Default.Search,
-                                contentDescription = if (showSearchBar) "Close search" else "Search"
+                                contentDescription = if (showSearchBar) stringResource(R.string.close_search) else stringResource(R.string.search)
                             )
                         }
 
@@ -50,7 +52,7 @@ fun JobListScreen(
                         IconButton(onClick = onNavigateToSettings) {
                             Icon(
                                 imageVector = Icons.Default.Settings,
-                                contentDescription = "Settings"
+                                contentDescription = stringResource(R.string.settings)
                             )
                         }
                     }
@@ -67,7 +69,7 @@ fun JobListScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(horizontal = 16.dp, vertical = 8.dp),
-                        placeholder = { Text("Search jobs by title, company, or location") },
+                        placeholder = { Text(stringResource(R.string.search_jobs_placeholder)) },
                         leadingIcon = {
                             Icon(Icons.Default.Search, contentDescription = null)
                         },
@@ -77,7 +79,7 @@ fun JobListScreen(
                                     searchQuery = ""
                                     viewModel.updateSearchQuery("")
                                 }) {
-                                    Icon(Icons.Default.Close, contentDescription = "Clear")
+                                    Icon(Icons.Default.Close, contentDescription = stringResource(R.string.clear))
                                 }
                             }
                         },
@@ -101,7 +103,7 @@ fun JobListScreen(
                         FilterChip(
                             selected = uiState.isRemoteOnly,
                             onClick = { viewModel.toggleRemoteFilter() },
-                            label = { Text("Remote") }
+                            label = { Text(stringResource(R.string.remote)) }
                         )
                     }
 
@@ -113,7 +115,7 @@ fun JobListScreen(
                                     if (uiState.selectedEmploymentType == "full_time") null else "full_time"
                                 )
                             },
-                            label = { Text("Full-time") }
+                            label = { Text(stringResource(R.string.full_time)) }
                         )
                     }
 
@@ -125,7 +127,7 @@ fun JobListScreen(
                                     if (uiState.selectedEmploymentType == "part_time") null else "part_time"
                                 )
                             },
-                            label = { Text("Part-time") }
+                            label = { Text(stringResource(R.string.part_time)) }
                         )
                     }
 
@@ -137,7 +139,7 @@ fun JobListScreen(
                                     if (uiState.selectedEmploymentType == "contract") null else "contract"
                                 )
                             },
-                            label = { Text("Contract") }
+                            label = { Text(stringResource(R.string.contract)) }
                         )
                     }
 
@@ -149,14 +151,14 @@ fun JobListScreen(
                                     if (uiState.selectedEmploymentType == "internship") null else "internship"
                                 )
                             },
-                            label = { Text("Internship") }
+                            label = { Text(stringResource(R.string.internship)) }
                         )
                     }
                 }
 
                 // Results count
                 Text(
-                    text = "${uiState.jobs.size} jobs",
+                    text = stringResource(R.string.jobs_count, uiState.jobs.size),
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -183,12 +185,12 @@ fun JobListScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = uiState.error ?: "An error occurred",
+                            text = uiState.error ?: stringResource(R.string.an_error_occurred),
                             color = MaterialTheme.colorScheme.error
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                         Button(onClick = { viewModel.loadJobs() }) {
-                            Text("Retry")
+                            Text(stringResource(R.string.retry))
                         }
                     }
                 }
@@ -201,7 +203,7 @@ fun JobListScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "No jobs found",
+                            text = stringResource(R.string.no_jobs_found),
                             style = MaterialTheme.typography.headlineSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -210,7 +212,7 @@ fun JobListScreen(
 
                         if (searchQuery.isNotEmpty() || uiState.isRemoteOnly || uiState.selectedEmploymentType != null) {
                             Text(
-                                text = "Try adjusting your search or filters",
+                                text = stringResource(R.string.try_adjusting_search),
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
@@ -223,7 +225,7 @@ fun JobListScreen(
                                 viewModel.toggleRemoteFilter()
                                 viewModel.selectEmploymentType(null)
                             }) {
-                                Text("Clear Filters")
+                                Text(stringResource(R.string.clear_filters))
                             }
                         }
                     }
@@ -268,7 +270,7 @@ fun JobCard(
             // Company logo
             AsyncImage(
                 model = job.getCompanyLogoUrl(),
-                contentDescription = "${job.companyName} logo",
+                contentDescription = stringResource(R.string.company_logo, job.companyName),
                 modifier = Modifier
                     .size(48.dp)
                     .padding(end = 12.dp),
@@ -317,7 +319,7 @@ fun JobCard(
                         Spacer(modifier = Modifier.width(8.dp))
                         AssistChip(
                             onClick = { },
-                            label = { Text("Remote", style = MaterialTheme.typography.labelSmall) },
+                            label = { Text(stringResource(R.string.remote), style = MaterialTheme.typography.labelSmall) },
                             modifier = Modifier.height(24.dp)
                         )
                     }
@@ -349,7 +351,7 @@ fun JobCard(
                     // Only show "Promoted" if the job is actually promoted
                     if (job.promoted == true) {
                         Text(
-                            text = "Promoted",
+                            text = stringResource(R.string.promoted),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.primary,
                             fontWeight = FontWeight.Medium

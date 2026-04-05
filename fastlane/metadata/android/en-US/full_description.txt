@@ -1,0 +1,26 @@
+ElevateCareers is your all-in-one career platform designed to help you find and land your dream job. Whether you're a recent graduate or an experienced professional, our intelligent tools make your job search faster and more effective.
+
+KEY FEATURES:
+
+AI Resume Builder
+Create a professional resume in minutes by simply talking to our AI assistant. No more staring at blank pages — just speak naturally about your experience and skills, and we'll craft a polished resume for you.
+
+Smart Job Search
+Browse thousands of job listings with powerful filters. Search by title, company, location, and job type including full-time, part-time, contract, and internship positions. Find remote opportunities that match your preferences.
+
+One-Click Apply
+Apply to jobs directly within the app. Our auto-fill feature populates application forms with your profile information, saving you time on every application.
+
+Voice-Powered Input
+Use voice input to fill out application forms hands-free. Perfect for when you're on the go.
+
+LinkedIn Integration
+Connect your LinkedIn profile to automatically import your professional information. Keep everything in sync effortlessly.
+
+Resume Management
+Upload existing resumes, build new ones with AI, or enter your information manually. Preview, share, and download your resume as a PDF.
+
+Profile & Preferences
+Set your job preferences including desired roles, remote work preference, and salary expectations. Get personalized job recommendations based on your profile.
+
+Download ElevateCareers today and take the next step in your career journey!

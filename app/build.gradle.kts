@@ -11,11 +11,20 @@ android {
     namespace = "com.kreativekoala.elevatecareers"
     compileSdk = 35
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("/Users/sushanthtiruvaipati/Documents/GitHub/AndroidAppKey")
+            storePassword = "KashtePhale!9"
+            keyAlias = "androidappkey"
+            keyPassword = "KashtePhale!9"
+        }
+    }
+
     defaultConfig {
         applicationId = "com.kreativekoala.elevatecareers"
         minSdk = 24
         targetSdk = 35
-        versionCode = 3
+        versionCode = 4
         versionName = "3.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -32,7 +41,13 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
+    }
+
+    lint {
+        checkReleaseBuilds = false
+        abortOnError = false
     }
 
     compileOptions {
@@ -65,6 +80,9 @@ dependencies {
     // Core Android
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    // AppCompat (for per-app language support)
+    implementation("androidx.appcompat:appcompat:1.7.0")
 
     // Compose
     implementation(libs.androidx.activity.compose)

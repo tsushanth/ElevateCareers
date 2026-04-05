@@ -11,9 +11,11 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.kreativekoala.elevatecareers.R
 import com.kreativekoala.elevatecareers.data.LinkedInManager
 import com.kreativekoala.elevatecareers.data.OnboardingManager
 import com.kreativekoala.elevatecareers.ui.auth.AuthViewModel
@@ -39,10 +41,10 @@ fun SettingsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Settings") },
+                title = { Text(stringResource(R.string.settings)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back))
                     }
                 }
             )
@@ -56,13 +58,13 @@ fun SettingsScreen(
                 .verticalScroll(scrollState)
         ) {
             // Account Section
-            SettingsSectionHeader("Account")
+            SettingsSectionHeader(stringResource(R.string.account))
 
             if (!uiState.isAnonymous) {
                 uiState.userEmail?.let { email ->
                     SettingsItem(
                         icon = Icons.Default.Email,
-                        title = "Email",
+                        title = stringResource(R.string.email),
                         subtitle = email,
                         onClick = { }
                     )
@@ -72,19 +74,19 @@ fun SettingsScreen(
 
             SettingsItem(
                 icon = Icons.Default.Person,
-                title = "Edit Profile",
+                title = stringResource(R.string.edit_profile),
                 onClick = { /* Navigate to edit profile */ }
             )
 
             HorizontalDivider()
 
             // App Section
-            SettingsSectionHeader("App")
+            SettingsSectionHeader(stringResource(R.string.app_section))
 
             SettingsItem(
                 icon = Icons.Default.Notifications,
-                title = "Notifications",
-                subtitle = "Manage notification preferences",
+                title = stringResource(R.string.notifications),
+                subtitle = stringResource(R.string.manage_notification_preferences),
                 onClick = { /* Navigate to notifications */ }
             )
 
@@ -92,8 +94,8 @@ fun SettingsScreen(
 
             SettingsItem(
                 icon = Icons.Default.Security,
-                title = "Privacy & Security",
-                subtitle = "Control your data and privacy",
+                title = stringResource(R.string.privacy_security),
+                subtitle = stringResource(R.string.control_data_privacy),
                 onClick = { /* Navigate to privacy */ }
             )
 
@@ -101,19 +103,19 @@ fun SettingsScreen(
 
             SettingsItem(
                 icon = Icons.Default.Info,
-                title = "About",
-                subtitle = "Version 1.0.0",
+                title = stringResource(R.string.about),
+                subtitle = stringResource(R.string.version_info),
                 onClick = { /* Show about dialog */ }
             )
 
             HorizontalDivider()
 
             // Danger Zone
-            SettingsSectionHeader("Account Actions")
+            SettingsSectionHeader(stringResource(R.string.account_actions))
 
             SettingsItem(
                 icon = Icons.Default.Logout,
-                title = "Sign Out",
+                title = stringResource(R.string.sign_out),
                 titleColor = MaterialTheme.colorScheme.error,
                 onClick = { showSignOutDialog = true }
             )
@@ -122,8 +124,8 @@ fun SettingsScreen(
 
             SettingsItem(
                 icon = Icons.Default.DeleteForever,
-                title = "Delete Account",
-                subtitle = "Permanently delete your account and data",
+                title = stringResource(R.string.delete_account),
+                subtitle = stringResource(R.string.permanently_delete_account),
                 titleColor = MaterialTheme.colorScheme.error,
                 onClick = { showDeleteAccountDialog = true }
             )
@@ -134,8 +136,8 @@ fun SettingsScreen(
         if (isLinkedInConnected && linkedInProfile != null) {
             SettingsItem(
                 icon = Icons.Default.Person,
-                title = "LinkedIn Profile",
-                subtitle = linkedInProfile?.fullName ?: "Connected",
+                title = stringResource(R.string.linkedin_profile),
+                subtitle = linkedInProfile?.fullName ?: stringResource(R.string.connected),
                 onClick = { }
             )
             HorizontalDivider()
@@ -151,8 +153,8 @@ fun SettingsScreen(
                         contentDescription = null
                     )
                 },
-                title = { Text("Sign Out") },
-                text = { Text("Are you sure you want to sign out?") },
+                title = { Text(stringResource(R.string.sign_out)) },
+                text = { Text(stringResource(R.string.sign_out_confirmation)) },
                 confirmButton = {
                     TextButton(
                         onClick = {
@@ -164,12 +166,12 @@ fun SettingsScreen(
                             onSignOut()
                         }
                     ) {
-                        Text("Sign Out")
+                        Text(stringResource(R.string.sign_out))
                     }
                 },
                 dismissButton = {
                     TextButton(onClick = { showSignOutDialog = false }) {
-                        Text("Cancel")
+                        Text(stringResource(R.string.cancel))
                     }
                 }
             )
@@ -186,13 +188,13 @@ fun SettingsScreen(
                         tint = MaterialTheme.colorScheme.error
                     )
                 },
-                title = { Text("Delete Account") },
+                title = { Text(stringResource(R.string.delete_account)) },
                 text = {
                     Column {
-                        Text("Are you sure you want to delete your account?")
+                        Text(stringResource(R.string.delete_account_confirmation))
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(
-                            text = "This action cannot be undone. All your data will be permanently deleted.",
+                            text = stringResource(R.string.delete_account_warning),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.error
                         )
@@ -208,12 +210,12 @@ fun SettingsScreen(
                             contentColor = MaterialTheme.colorScheme.error
                         )
                     ) {
-                        Text("Delete")
+                        Text(stringResource(R.string.delete))
                     }
                 },
                 dismissButton = {
                     TextButton(onClick = { showDeleteAccountDialog = false }) {
-                        Text("Cancel")
+                        Text(stringResource(R.string.cancel))
                     }
                 }
             )

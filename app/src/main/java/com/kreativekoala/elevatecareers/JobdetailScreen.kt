@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
@@ -37,7 +38,7 @@ fun JobDetailScreen(
                     IconButton(onClick = onBackClick) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back"
+                            contentDescription = stringResource(R.string.back)
                         )
                     }
                 }
@@ -59,7 +60,7 @@ fun JobDetailScreen(
             ) {
                 AsyncImage(
                     model = job.getCompanyLogoUrl(),
-                    contentDescription = "${job.companyName} logo",
+                    contentDescription = stringResource(R.string.company_logo, job.companyName),
                     modifier = Modifier.size(64.dp),
                     contentScale = ContentScale.Fit
                 )
@@ -86,7 +87,7 @@ fun JobDetailScreen(
 
             // Metadata
             Text(
-                text = "${job.getLocationDisplay()} · ${job.getTimeAgo()} · 67 people clicked apply",
+                text = stringResource(R.string.people_clicked_apply, job.getLocationDisplay(), job.getTimeAgo()),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -94,7 +95,7 @@ fun JobDetailScreen(
             Spacer(modifier = Modifier.height(4.dp))
 
             Text(
-                text = "Promoted by hirer · Responses managed off LinkedIn",
+                text = stringResource(R.string.promoted_by_hirer),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -116,7 +117,7 @@ fun JobDetailScreen(
                 if (job.remote) {
                     AssistChip(
                         onClick = { },
-                        label = { Text("✓ Remote") }
+                        label = { Text(stringResource(R.string.remote_check)) }
                     )
                 }
 
@@ -126,7 +127,7 @@ fun JobDetailScreen(
                         .joinToString(" ") { it.replaceFirstChar { char -> char.uppercase() } }
                     AssistChip(
                         onClick = { },
-                        label = { Text("✓ $displayType") }
+                        label = { Text(stringResource(R.string.type_check, displayType)) }
                     )
                 }
             }
@@ -145,7 +146,7 @@ fun JobDetailScreen(
                     },
                     modifier = Modifier.weight(1f)
                 ) {
-                    Text("Apply")
+                    Text(stringResource(R.string.apply))
                     Spacer(modifier = Modifier.width(8.dp))
                     Icon(
                         imageVector = Icons.Outlined.OpenInNew,
@@ -165,7 +166,7 @@ fun JobDetailScreen(
                         modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text("Save")
+                    Text(stringResource(R.string.save))
                 }
             }
 
@@ -173,7 +174,7 @@ fun JobDetailScreen(
 
             // About the job
             Text(
-                text = "About the job",
+                text = stringResource(R.string.about_the_job),
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold
             )
@@ -193,7 +194,7 @@ fun JobDetailScreen(
                 Spacer(modifier = Modifier.height(24.dp))
 
                 Text(
-                    text = "Skills",
+                    text = stringResource(R.string.skills),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold
                 )

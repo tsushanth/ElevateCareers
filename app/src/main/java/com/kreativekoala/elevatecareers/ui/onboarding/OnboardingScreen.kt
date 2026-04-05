@@ -14,10 +14,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.kreativekoala.elevatecareers.R
 import androidx.navigation.NavController
 import com.kreativekoala.elevatecareers.data.LinkedInManager
 import com.kreativekoala.elevatecareers.data.OnboardingManager
@@ -51,7 +53,7 @@ fun OnboardingScreen(
     ) { result ->
         Toast.makeText(
             context,
-            "Complete LinkedIn login in your browser",
+            context.getString(R.string.complete_linkedin_login_browser),
             Toast.LENGTH_SHORT
         ).show()
     }
@@ -72,14 +74,14 @@ fun OnboardingScreen(
 
                     Toast.makeText(
                         context,
-                        "✅ Resume uploaded successfully!",
+                        context.getString(R.string.resume_uploaded_success),
                         Toast.LENGTH_SHORT
                     ).show()
                 }
             } catch (e: Exception) {
                 Toast.makeText(
                     context,
-                    "❌ Failed to upload: ${e.message}",
+                    context.getString(R.string.failed_to_upload, e.message ?: ""),
                     Toast.LENGTH_SHORT
                 ).show()
             } finally {
@@ -88,7 +90,7 @@ fun OnboardingScreen(
         } else {
             Toast.makeText(
                 context,
-                "No file selected",
+                context.getString(R.string.no_file_selected),
                 Toast.LENGTH_SHORT
             ).show()
         }
@@ -163,7 +165,7 @@ fun OnboardingScreen(
 
                     Toast.makeText(
                         context,
-                        "✅ Resume uploaded: ${file.name}",
+                        context.getString(R.string.resume_uploaded_filename, file.name),
                         Toast.LENGTH_SHORT
                     ).show()
 
@@ -171,7 +173,7 @@ fun OnboardingScreen(
                 } catch (e: Exception) {
                     Toast.makeText(
                         context,
-                        "❌ Failed to upload: ${e.message}",
+                        context.getString(R.string.failed_to_upload, e.message ?: ""),
                         Toast.LENGTH_SHORT
                     ).show()
                 } finally {
@@ -182,7 +184,7 @@ fun OnboardingScreen(
                 showCustomFilePicker = false
                 Toast.makeText(
                     context,
-                    "File selection cancelled",
+                    context.getString(R.string.file_selection_cancelled),
                     Toast.LENGTH_SHORT
                 ).show()
             },
@@ -209,14 +211,14 @@ fun WelcomeStep(
         )
 
         Text(
-            text = "Welcome to ElevateCareers",
+            text = stringResource(R.string.welcome_to_elevatecareers),
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center
         )
 
         Text(
-            text = "Let's get you set up to find your dream job",
+            text = stringResource(R.string.get_set_up_dream_job),
             style = MaterialTheme.typography.bodyLarge,
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -228,11 +230,11 @@ fun WelcomeStep(
             onClick = onNext,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Get Started")
+            Text(stringResource(R.string.get_started))
         }
 
         TextButton(onClick = onSkip) {
-            Text("Skip Setup")
+            Text(stringResource(R.string.skip_setup))
         }
     }
 }
@@ -258,14 +260,14 @@ fun LinkedInStep(
         )
 
         Text(
-            text = "Connect LinkedIn",
+            text = stringResource(R.string.connect_linkedin),
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center
         )
 
         Text(
-            text = "We'll auto-fill your profile with your LinkedIn information",
+            text = stringResource(R.string.auto_fill_linkedin_info),
             style = MaterialTheme.typography.bodyLarge,
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -291,7 +293,7 @@ fun LinkedInStep(
                     )
                     Spacer(modifier = Modifier.width(12.dp))
                     Text(
-                        text = "Connected as $profileName",
+                        text = stringResource(R.string.connected_as, profileName),
                         style = MaterialTheme.typography.bodyMedium
                     )
                 }
@@ -301,7 +303,7 @@ fun LinkedInStep(
                 onClick = onNext,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Continue")
+                Text(stringResource(R.string.continue_text))
             }
         } else {
             Button(
@@ -310,11 +312,11 @@ fun LinkedInStep(
             ) {
                 Icon(Icons.Default.Link, contentDescription = null)
                 Spacer(modifier = Modifier.width(8.dp))
-                Text("Connect LinkedIn")
+                Text(stringResource(R.string.connect_linkedin))
             }
 
             TextButton(onClick = onSkip) {
-                Text("Skip for now")
+                Text(stringResource(R.string.skip_for_now))
             }
         }
     }
@@ -345,14 +347,14 @@ fun ResumeStep(
         )
 
         Text(
-            text = "Upload Your Resume",
+            text = stringResource(R.string.upload_your_resume),
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center
         )
 
         Text(
-            text = "We'll automatically extract your skills and experience",
+            text = stringResource(R.string.auto_extract_skills),
             style = MaterialTheme.typography.bodyLarge,
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -381,7 +383,7 @@ fun ResumeStep(
                         Spacer(modifier = Modifier.width(12.dp))
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = "Resume uploaded!",
+                                text = stringResource(R.string.resume_uploaded_excl),
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Medium
                             )
@@ -394,7 +396,7 @@ fun ResumeStep(
                         IconButton(onClick = { showPickerChoice = true }) {
                             Icon(
                                 imageVector = Icons.Default.Edit,
-                                contentDescription = "Change resume",
+                                contentDescription = stringResource(R.string.change_resume),
                                 tint = MaterialTheme.colorScheme.primary
                             )
                         }
@@ -408,11 +410,11 @@ fun ResumeStep(
                 onClick = onComplete,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Complete Setup")
+                Text(stringResource(R.string.complete_setup))
             }
 
             TextButton(onClick = onComplete) {
-                Text("Continue with this resume")
+                Text(stringResource(R.string.continue_with_resume))
             }
         } else {
             Button(
@@ -426,20 +428,20 @@ fun ResumeStep(
                         color = MaterialTheme.colorScheme.onPrimary
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text("Uploading...")
+                    Text(stringResource(R.string.uploading))
                 } else {
                     Icon(Icons.Default.Upload, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text("Choose Resume")
+                    Text(stringResource(R.string.choose_resume))
                 }
             }
 
             TextButton(onClick = onSkip) {
-                Text("Skip for now")
+                Text(stringResource(R.string.skip_for_now))
             }
 
             Text(
-                text = "You can always upload your resume later from Settings",
+                text = stringResource(R.string.upload_later_from_settings),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
@@ -459,13 +461,13 @@ fun ResumeStep(
                     tint = MaterialTheme.colorScheme.primary
                 )
             },
-            title = { Text("Create or Upload Resume") },
+            title = { Text(stringResource(R.string.create_or_upload_resume)) },
             text = {
                 Column(
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     Text(
-                        text = "How would you like to add your resume?",
+                        text = stringResource(R.string.how_add_resume),
                         style = MaterialTheme.typography.bodyMedium
                     )
 
@@ -496,7 +498,7 @@ fun ResumeStep(
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Text(
-                                        text = "Build with AI Voice",
+                                        text = stringResource(R.string.build_with_ai_voice),
                                         style = MaterialTheme.typography.titleMedium,
                                         fontWeight = FontWeight.Bold
                                     )
@@ -506,7 +508,7 @@ fun ResumeStep(
                                         shape = MaterialTheme.shapes.small
                                     ) {
                                         Text(
-                                            text = "NEW",
+                                            text = stringResource(R.string.new_badge),
                                             modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
                                             style = MaterialTheme.typography.labelSmall,
                                             color = MaterialTheme.colorScheme.onPrimary
@@ -514,7 +516,7 @@ fun ResumeStep(
                                     }
                                 }
                                 Text(
-                                    text = "Chat with AI to create your resume",
+                                    text = stringResource(R.string.chat_with_ai_create_resume),
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onPrimaryContainer
                                 )
@@ -551,12 +553,12 @@ fun ResumeStep(
                             Spacer(modifier = Modifier.width(16.dp))
                             Column {
                                 Text(
-                                    text = "Upload from Cloud",
+                                    text = stringResource(R.string.upload_from_cloud),
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold
                                 )
                                 Text(
-                                    text = "Google Drive, Dropbox, etc.",
+                                    text = stringResource(R.string.google_drive_dropbox),
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSecondaryContainer
                                 )
@@ -588,12 +590,12 @@ fun ResumeStep(
                             Spacer(modifier = Modifier.width(16.dp))
                             Column {
                                 Text(
-                                    text = "Device Storage",
+                                    text = stringResource(R.string.device_storage),
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold
                                 )
                                 Text(
-                                    text = "Browse local files",
+                                    text = stringResource(R.string.browse_local_files),
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onTertiaryContainer
                                 )
@@ -605,7 +607,7 @@ fun ResumeStep(
             confirmButton = {},
             dismissButton = {
                 TextButton(onClick = { showPickerChoice = false }) {
-                    Text("Cancel")
+                    Text(stringResource(R.string.cancel))
                 }
             }
         )
