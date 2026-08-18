@@ -48,7 +48,9 @@ data class UserProfile(
     @SerialName("profile_completeness")
     val profileCompleteness: Int? = null,
     @SerialName("profile_source")
-    val profileSource: String? = null
+    val profileSource: String? = null,
+    @SerialName("autofill_data")
+    val autofillData: Map<String, String>? = null
 )
 
 @Serializable
@@ -115,7 +117,9 @@ data class Resume(
     @SerialName("uploaded_at")
     val uploadedAt: String,
     @SerialName("is_primary")
-    val isPrimary: Boolean = false
+    val isPrimary: Boolean = false,
+    @SerialName("raw_text")
+    val rawText: String? = null
 )
 
 @Serializable
