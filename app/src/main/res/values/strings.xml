@@ -275,4 +275,8 @@
     <string name="failed_send_message">Failed to send message</string>
     <string name="speech_recognition_error">Speech recognition error: %d</string>
     <string name="tell_me_about_yourself">Tell me about yourself…</string>
+
+    <!-- Supabase config (mirrors SupabaseService.kt SUPABASE_URL/SUPABASE_ANON_KEY; anon key is safe for client embedding) -->
+    <string name="supabase_url" translatable="false">https://uuntgvccvepqhfaupjqa.supabase.co</string>
+    <string name="supabase_anon_key" translatable="false">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1bnRndmNjdmVwcWhmYXVwanFhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEwNzE3NzQsImV4cCI6MjA3NjY0Nzc3NH0.NiYjN9ZdtRhcoZyxVQh8qzgyAOHnowVC4JSeOs-Y9XA</string>
 </resources>
