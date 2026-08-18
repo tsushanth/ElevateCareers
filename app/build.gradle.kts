@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.kreativekoala.elevatecareers"
-    compileSdk = 35
+    compileSdk = 36
 
     signingConfigs {
         create("release") {
@@ -23,9 +23,9 @@ android {
     defaultConfig {
         applicationId = "com.kreativekoala.elevatecareers"
         minSdk = 24
-        targetSdk = 35
-        versionCode = 4
-        versionName = "3.0"
+        targetSdk = 36
+        versionCode = 5
+        versionName = "3.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
