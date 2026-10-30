@@ -279,4 +279,6 @@
     <!-- Supabase config (mirrors SupabaseService.kt SUPABASE_URL/SUPABASE_ANON_KEY; anon key is safe for client embedding) -->
     <string name="supabase_url" translatable="false">https://uuntgvccvepqhfaupjqa.supabase.co</string>
     <string name="supabase_anon_key" translatable="false">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1bnRndmNjdmVwcWhmYXVwanFhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEwNzE3NzQsImV4cCI6MjA3NjY0Nzc3NH0.NiYjN9ZdtRhcoZyxVQh8qzgyAOHnowVC4JSeOs-Y9XA</string>
+    <string name="jobs_load_error_title">Couldn\'t load jobs</string>
+    <string name="jobs_load_error_message">Check your connection and try again.</string>
 </resources>

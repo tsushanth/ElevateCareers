@@ -129,7 +129,12 @@ object SupabaseService {
         }
     }
 
-    fun getCurrentUser() = client.auth.currentUserOrNull()
+    // Never throw: the Supabase backend may be unreachable, and callers treat null as "not signed in".
+    fun getCurrentUser() = try {
+        client.auth.currentUserOrNull()
+    } catch (e: Exception) {
+        null
+    }
 
     suspend fun getAuthToken(): String? {
         return try {

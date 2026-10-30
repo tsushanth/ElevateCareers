@@ -66,11 +66,12 @@ class ProfileViewModel : ViewModel() {
                         )
                     }
                 },
-                onFailure = { error ->
+                onFailure = {
+                    // Soft failure: no raw network/host text in the UI.
                     _uiState.update {
                         it.copy(
                             isLoading = false,
-                            error = error.message ?: "Failed to load profile"
+                            error = "Couldn't load your profile right now. Please try again later."
                         )
                     }
                 }
@@ -185,7 +186,16 @@ class ProfileViewModel : ViewModel() {
                 supabase.deleteResume(resume.filePath)
 
                 // Delete from database
-                apiService.deleteResume(resume.id)
+                val deleteResult = apiService.deleteResume(resume.id)
+                if (deleteResult.isFailure) {
+                    _uiState.update {
+                        it.copy(
+                            isLoading = false,
+                            error = "Couldn't delete the resume right now. Please try again later."
+                        )
+                    }
+                    return@launch
+                }
 
                 // Reload profile
                 loadProfile()

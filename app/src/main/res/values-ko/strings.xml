@@ -271,4 +271,6 @@
     <string name="failed_send_message">\uBA54\uC2DC\uC9C0 \uC804\uC1A1 \uC2E4\uD328</string>
     <string name="speech_recognition_error">\uC74C\uC131 \uC778\uC2DD \uC624\uB958: %d</string>
     <string name="tell_me_about_yourself">\uC790\uAE30\uC18C\uAC1C\uB97C \uD574\uC8FC\uC138\uC694\u2026</string>
+    <string name="jobs_load_error_title">일자리를 불러올 수 없습니다</string>
+    <string name="jobs_load_error_message">연결 상태를 확인하고 다시 시도해 주세요.</string>
 </resources>

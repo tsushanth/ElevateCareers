@@ -271,4 +271,6 @@
     <string name="failed_send_message">Error al enviar el mensaje</string>
     <string name="speech_recognition_error">Error de reconocimiento de voz: %d</string>
     <string name="tell_me_about_yourself">Cu\u00E9ntame sobre ti\u2026</string>
+    <string name="jobs_load_error_title">No se pudieron cargar los empleos</string>
+    <string name="jobs_load_error_message">Comprueba tu conexión e inténtalo de nuevo.</string>
 </resources>

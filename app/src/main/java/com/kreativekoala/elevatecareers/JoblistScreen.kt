@@ -180,13 +180,23 @@ fun JobListScreen(
                 }
 
                 uiState.error != null -> {
+                    // Friendly state: never show the raw exception text to the user.
                     Column(
-                        modifier = Modifier.align(Alignment.Center),
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                            .padding(32.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = uiState.error ?: stringResource(R.string.an_error_occurred),
-                            color = MaterialTheme.colorScheme.error
+                            text = stringResource(R.string.jobs_load_error_title),
+                            style = MaterialTheme.typography.headlineSmall,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = stringResource(R.string.jobs_load_error_message),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                         Button(onClick = { viewModel.loadJobs() }) {
