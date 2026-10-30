@@ -20,8 +20,10 @@ data class Job(
     @SerialName("employment_type")
     val employmentType: String? = null,
     @SerialName("salary_min")
+    @Serializable(with = FlexibleIntSerializer::class)
     val salaryMin: Int? = null,
     @SerialName("salary_max")
+    @Serializable(with = FlexibleIntSerializer::class)
     val salaryMax: Int? = null,
     @SerialName("salary_currency")
     val salaryCurrency: String? = null,
@@ -30,6 +32,9 @@ data class Job(
     @SerialName("description_excerpt")
     val descriptionExcerpt: String? = null,
     val locations: List<Location> = emptyList(),
+    // The /jobs list returns flat `cities` / `countries` arrays instead of `locations`.
+    val cities: List<String>? = null,
+    val countries: List<String>? = null,
     val skills: List<String> = emptyList(),
     val promoted: Boolean = false
 ) : Parcelable
@@ -51,8 +56,9 @@ data class Location(
 @Serializable
 data class JobsResponse(
     val jobs: List<Job>,
-    val count: Int,
+    val count: Int = 0,
     val page: Int? = null,
+    val offset: Int? = null,
     val limit: Int? = null
 )
 
@@ -67,8 +73,13 @@ fun Job.getSalaryRange(): String? {
 }
 
 fun Job.getLocationDisplay(): String {
+    // The list API can pack several places into one city string ("Austin; New York City").
+    val city = cities?.firstOrNull { it.isNotBlank() }?.substringBefore(';')?.trim()
+    val country = countries?.firstOrNull { it.isNotBlank() }?.trim()
+    val fromFlatFields = listOfNotNull(city, country).filter { it.isNotEmpty() }.joinToString(", ")
     return when {
         locations.isNotEmpty() -> locations.first().toDisplayString()
+        fromFlatFields.isNotEmpty() -> fromFlatFields
         remote -> "Remote"
         else -> "Location not specified"
     }

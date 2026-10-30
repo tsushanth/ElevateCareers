@@ -271,4 +271,6 @@
     <string name="failed_send_message">\u0938\u0902\u0926\u0947\u0936 \u092D\u0947\u091C\u0928\u0947 \u092E\u0947\u0902 \u0935\u093F\u092B\u0932</string>
     <string name="speech_recognition_error">\u0906\u0935\u093E\u091C\u093C \u092A\u0939\u091A\u093E\u0928 \u0924\u094D\u0930\u0941\u091F\u093F: %d</string>
     <string name="tell_me_about_yourself">\u0905\u092A\u0928\u0947 \u092C\u093E\u0930\u0947 \u092E\u0947\u0902 \u092C\u0924\u093E\u090F\u0902\u2026</string>
+    <string name="jobs_load_error_title">नौकरियाँ लोड नहीं हो सकीं</string>
+    <string name="jobs_load_error_message">अपना कनेक्शन जाँचें और फिर से प्रयास करें।</string>
 </resources>

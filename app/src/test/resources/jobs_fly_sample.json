@@ -1,0 +1,92 @@
+{
+ "jobs": [
+  {
+   "id": "568730",
+   "company_id": "14600",
+   "provider": "recruitee",
+   "external_id": "2802928",
+   "apply_url": "https://hardrockdigital.recruitee.com/o/specialist-vip-customer-service-5/c/new",
+   "title": "Specialist - VIP Customer Service",
+   "employment_type": "full_time",
+   "remote": false,
+   "salary_min": null,
+   "salary_max": null,
+   "salary_currency": null,
+   "posted_at": "2026-10-29T18:02:13.000Z",
+   "valid_through": null,
+   "description_excerpt": "**What are we building?** Hard Rock Digital is a **fiercely focused** team working to become the best online sportsbook,",
+   "current_version_id": "1374827",
+   "created_at": "2026-10-29T18:17:54.115Z",
+   "updated_at": "2026-10-29T18:17:54.278Z",
+   "is_active": true,
+   "company_name": "Hard Rock Digital",
+   "company_domain": "hardrockdigital.recruitee.com",
+   "company_logo_domain": "hardrockdigital.com",
+   "cities": [
+    "Hollywood"
+   ],
+   "countries": [
+    "United States"
+   ]
+  },
+  {
+   "id": "569282",
+   "company_id": "12797",
+   "provider": "indeed",
+   "external_id": "in-5c15a48f7fb66de1",
+   "apply_url": "https://jobs.smartrecruiters.com/ServiceNow/744000158564879-senior-staff-outbound-product-manager",
+   "title": "Senior Staff Outbound Product Manager",
+   "employment_type": "fulltime",
+   "remote": true,
+   "salary_min": "190900",
+   "salary_max": "334100",
+   "salary_currency": "USD",
+   "posted_at": "2026-10-29T00:00:00.000Z",
+   "valid_through": null,
+   "description_excerpt": "**Company Description** It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworke",
+   "current_version_id": "1378323",
+   "created_at": "2026-10-29T19:01:33.272Z",
+   "updated_at": "2026-10-29T19:01:33.445Z",
+   "is_active": true,
+   "company_name": "servicenow",
+   "company_domain": "servicenow.jobspy",
+   "company_logo_domain": "servicenow.com",
+   "cities": [
+    "Santa Clara"
+   ],
+   "countries": [
+    "US"
+   ]
+  },
+  {
+   "id": "562778",
+   "company_id": "1790",
+   "provider": "greenhouse",
+   "external_id": "8319536",
+   "apply_url": "https://job-boards.greenhouse.io/reddit/jobs/8319536",
+   "title": "Machine Learning Engineering Manager -  Core Ads Ranking",
+   "employment_type": null,
+   "remote": true,
+   "salary_min": null,
+   "salary_max": null,
+   "salary_currency": null,
+   "posted_at": "2026-10-29T12:18:07.000Z",
+   "valid_through": null,
+   "description_excerpt": "&lt;div class=&quot;content-intro&quot;&gt;&lt;div class=&quot;c-message_kit__blocks c-message_kit__blocks--rich_text&qu",
+   "current_version_id": "1342694",
+   "created_at": "2026-10-28T17:25:34.060Z",
+   "updated_at": "2026-10-29T15:33:06.183Z",
+   "is_active": true,
+   "company_name": "Reddit",
+   "company_domain": "reddit.greenhouse.io",
+   "company_logo_domain": "reddit.com",
+   "cities": null,
+   "countries": [
+    "United States"
+   ]
+  }
+ ],
+ "count": 3,
+ "offset": 0,
+ "limit": 50
+}

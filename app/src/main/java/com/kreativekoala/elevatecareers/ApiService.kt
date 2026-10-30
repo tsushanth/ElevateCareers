@@ -11,11 +11,14 @@ import io.ktor.client.engine.android.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.plugins.logging.*
 import io.ktor.client.request.*
+import io.ktor.client.statement.*
+import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 
 class ApiService {
 
+    // Legacy backend: only used for profile / resume / LinkedIn calls, which are not repointed yet.
     private val baseUrl = "https://elevate-careers-917362189743.europe-west1.run.app"
 
     private val client = HttpClient(Android) {
@@ -24,6 +27,7 @@ class ApiService {
                 prettyPrint = true
                 isLenient = true
                 ignoreUnknownKeys = true
+                coerceInputValues = true
             })
         }
 
@@ -42,7 +46,7 @@ class ApiService {
         offset: Int = 0
     ): Result<List<Job>> {
         return try {
-            val response = client.get("$baseUrl/jobs") {
+            val response = client.get("${ApiConfig.JOBS_API_BASE_URL}/jobs") {
                 parameter("limit", limit)
                 parameter("offset", offset)
                 keyword?.let { parameter("keyword", it) }
@@ -51,8 +55,10 @@ class ApiService {
                 employmentType?.let { parameter("employment_type", it) }
             }
 
-            val jobsResponse: JobsResponse = response.body()
-            Result.success(jobsResponse.jobs)
+            if (!response.status.isSuccess()) {
+                return Result.failure(java.io.IOException("Jobs request failed with HTTP ${response.status.value}"))
+            }
+            Result.success(JobsParser.parseList(response.bodyAsText()))
         } catch (e: Exception) {
             e.printStackTrace()
             Result.failure(e)
@@ -61,8 +67,11 @@ class ApiService {
 
     suspend fun getJob(id: String): Result<Job?> {
         return try {
-            val job: Job = client.get("$baseUrl/jobs/$id").body()
-            Result.success(job)
+            val response = client.get("${ApiConfig.JOBS_API_BASE_URL}/jobs/$id")
+            if (!response.status.isSuccess()) {
+                return Result.failure(java.io.IOException("Job request failed with HTTP ${response.status.value}"))
+            }
+            Result.success(JobsParser.parseJob(response.bodyAsText()))
         } catch (e: Exception) {
             e.printStackTrace()
             Result.failure(e)
