@@ -1,0 +1,1 @@
+Fixed the job list not loading. Jobs now load from our updated servers, and if something goes wrong you see a friendly retry screen instead of an error message.
