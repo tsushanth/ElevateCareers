@@ -1,5 +1,6 @@
 package com.kreativekoala.elevatecareers.ui.profile
 
+import com.kreativekoala.elevatecareers.reportFailure
 import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -154,6 +155,7 @@ class ProfileViewModel : ViewModel() {
                 }
 
             } catch (e: Exception) {
+                reportFailure("Resume upload", e)
                 _uiState.update {
                     it.copy(
                         isLoading = false,
@@ -207,6 +209,7 @@ class ProfileViewModel : ViewModel() {
                     )
                 }
             } catch (e: Exception) {
+                reportFailure("Resume delete", e)
                 _uiState.update {
                     it.copy(
                         isLoading = false,

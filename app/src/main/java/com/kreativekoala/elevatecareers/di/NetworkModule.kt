@@ -2,6 +2,7 @@ package com.kreativekoala.elevatecareers.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.kreativekoala.elevatecareers.FailureReporterInterceptor
 import com.kreativekoala.elevatecareers.data.api.ResumeApiService
 import dagger.Module
 import dagger.Provides
@@ -28,6 +29,7 @@ object NetworkModule {
     @Singleton
     fun provideOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
+            .addInterceptor(FailureReporterInterceptor())
             .addInterceptor(
                 HttpLoggingInterceptor().apply {
                     level = HttpLoggingInterceptor.Level.BODY
