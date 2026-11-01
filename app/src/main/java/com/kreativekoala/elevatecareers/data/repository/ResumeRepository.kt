@@ -1,5 +1,6 @@
 package com.kreativekoala.elevatecareers.data.repository
 
+import com.kreativekoala.elevatecareers.reportFailure
 import com.kreativekoala.elevatecareers.data.api.ResumeApiService
 import com.kreativekoala.elevatecareers.data.model.*
 import kotlinx.coroutines.Dispatchers
@@ -21,6 +22,7 @@ class ResumeRepository(
                 )
                 Result.success(response)
             } catch (e: Exception) {
+                reportFailure("Resume chat start", e)
                 Result.failure(e)
             }
         }
@@ -42,6 +44,7 @@ class ResumeRepository(
                 )
                 Result.success(response)
             } catch (e: Exception) {
+                reportFailure("Resume chat message", e)
                 Result.failure(e)
             }
         }

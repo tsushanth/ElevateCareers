@@ -30,6 +30,8 @@ object JobsParser {
         return try {
             ApiConfig.json.decodeFromJsonElement(Job.serializer(), element.jsonObject)
         } catch (e: Exception) {
+            // A schema drift here silently empties the feed: surface it (class + frames only).
+            reportFailure("Job parse", e)
             null
         }
     }

@@ -56,10 +56,12 @@ class ApiService {
             }
 
             if (!response.status.isSuccess()) {
+                reportFailure("Job list", null, "job list request failed: HTTP ${response.status.value}")
                 return Result.failure(java.io.IOException("Jobs request failed with HTTP ${response.status.value}"))
             }
             Result.success(JobsParser.parseList(response.bodyAsText()))
         } catch (e: Exception) {
+            reportFailure("Job list", e)
             e.printStackTrace()
             Result.failure(e)
         }
@@ -69,10 +71,13 @@ class ApiService {
         return try {
             val response = client.get("${ApiConfig.JOBS_API_BASE_URL}/jobs/$id")
             if (!response.status.isSuccess()) {
+                // 404 = job removed, expected; only server-side breakage is a signal.
+                if (response.status.value >= 500) reportFailure("Job detail", null, "job detail request failed: HTTP ${response.status.value}")
                 return Result.failure(java.io.IOException("Job request failed with HTTP ${response.status.value}"))
             }
             Result.success(JobsParser.parseJob(response.bodyAsText()))
         } catch (e: Exception) {
+            reportFailure("Job detail", e)
             e.printStackTrace()
             Result.failure(e)
         }
@@ -92,19 +97,23 @@ class ApiService {
                 setBody(ParseResumeRequest(storagePath, fileName, fileSize))
                 header("Authorization", "Bearer ${SupabaseService.getAuthToken()}")
             }
+            if (!response.status.isSuccess()) reportFailure("Resume parse", null, "resume parse request failed: HTTP ${response.status.value}")
             Result.success(response.body())
         } catch (e: Exception) {
+            reportFailure("Resume parse", e)
             Result.failure(e)
         }
     }
 
     suspend fun deleteResume(resumeId: String): Result<Unit> {
         return try {
-            client.delete("$baseUrl/api/profile/resume/$resumeId") {
+            val response = client.delete("$baseUrl/api/profile/resume/$resumeId") {
                 header("Authorization", "Bearer ${SupabaseService.getAuthToken()}")
             }
+            if (!response.status.isSuccess()) reportFailure("Resume delete", null, "resume delete request failed: HTTP ${response.status.value}")
             Result.success(Unit)
         } catch (e: Exception) {
+            reportFailure("Resume delete", e)
             Result.failure(e)
         }
     }
@@ -117,8 +126,10 @@ class ApiService {
                 setBody(LinkedInImportRequest(linkedInData))
                 header("Authorization", "Bearer ${SupabaseService.getAuthToken()}")
             }
+            if (!response.status.isSuccess()) reportFailure("LinkedIn import", null, "linkedin import request failed: HTTP ${response.status.value}")
             Result.success(response.body())
         } catch (e: Exception) {
+            reportFailure("LinkedIn import", e)
             Result.failure(e)
         }
     }
