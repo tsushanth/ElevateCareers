@@ -41,10 +41,6 @@ import com.kreativekoala.elevatecareers.ui.resume.ResumePreviewScreen
 import com.kreativekoala.elevatecareers.ui.application.JobApplicationScreen
 import com.kreativekoala.elevatecareers.ui.factories.ViewModelFactory
 import kotlinx.coroutines.launch
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
-import java.net.URLDecoder
-import java.net.URLEncoder
 
 class MainActivity : AppCompatActivity() {
 
@@ -285,9 +281,7 @@ fun ElevateCareersApp(authViewModel: AuthViewModel) {
                 viewModel = viewModel,
                 onJobClick = { job ->
                     // ⭐ Navigate to in-app application screen instead of browser
-                    val jobJson = Json.encodeToString(job)
-                    val encodedJob = URLEncoder.encode(jobJson, "UTF-8")
-                    navController.navigate("job_application/$encodedJob")
+                    navController.navigate("job_application/${JobRoute.encode(job)}")
                 },
                 onNavigateToSettings = {
                     navController.navigate("settings")
@@ -302,9 +296,12 @@ fun ElevateCareersApp(authViewModel: AuthViewModel) {
                 navArgument("jobJson") { type = NavType.StringType }
             )
         ) { backStackEntry ->
-            val encodedJob = backStackEntry.arguments?.getString("jobJson")
-            val jobJson = URLDecoder.decode(encodedJob, "UTF-8")
-            val job = Json.decodeFromString<Job>(jobJson)
+            val job = JobRoute.decode(backStackEntry.arguments?.getString("jobJson"))
+            if (job == null) {
+                // An unreadable route must close the screen, never crash the app.
+                LaunchedEffect(Unit) { navController.popBackStack() }
+                return@composable
+            }
 
             // ⭐ Use ViewModelFactory for JobApplicationViewModel
             val viewModel: com.kreativekoala.elevatecareers.ui.application.JobApplicationViewModel =
@@ -323,9 +320,11 @@ fun ElevateCareersApp(authViewModel: AuthViewModel) {
                 navArgument("jobJson") { type = NavType.StringType }
             )
         ) { backStackEntry ->
-            val encodedJob = backStackEntry.arguments?.getString("jobJson")
-            val jobJson = URLDecoder.decode(encodedJob, "UTF-8")
-            val job = Json.decodeFromString<Job>(jobJson)
+            val job = JobRoute.decode(backStackEntry.arguments?.getString("jobJson"))
+            if (job == null) {
+                LaunchedEffect(Unit) { navController.popBackStack() }
+                return@composable
+            }
 
             JobDetailScreen(
                 job = job,

@@ -31,8 +31,8 @@ android {
         applicationId = "com.kreativekoala.elevatecareers"
         minSdk = 24
         targetSdk = 36
-        versionCode = 6
-        versionName = "3.0.2"
+        versionCode = 7
+        versionName = "3.0.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
