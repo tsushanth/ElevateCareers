@@ -19,6 +19,6 @@ class ElevateCareersApplication : Application() {
     }
 
     companion object {
-        private const val REPORTER_KEY = "elevatecareers"
+        private const val REPORTER_KEY = "8a0e13469ccf9f24076b83721a9dfb38"
     }
 }
