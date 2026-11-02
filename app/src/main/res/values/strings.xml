@@ -95,7 +95,7 @@
 
     <!-- Job Detail Screen -->
     <string name="about_the_job">About the job</string>
-    <string name="people_clicked_apply">%1$s \u00B7 %2$s \u00B7 67 people clicked apply</string>
+    <string name="job_location_time_ago">%1$s \u00B7 %2$s</string>
     <string name="promoted_by_hirer">Promoted by hirer \u00B7 Responses managed off LinkedIn</string>
     <string name="remote_check">\u2713 Remote</string>
     <string name="type_check">\u2713 %s</string>
