@@ -87,7 +87,7 @@ fun JobDetailScreen(
 
             // Metadata
             Text(
-                text = stringResource(R.string.people_clicked_apply, job.getLocationDisplay(), job.getTimeAgo()),
+                text = stringResource(R.string.job_location_time_ago, job.getLocationDisplay(), job.getTimeAgo()),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

@@ -93,7 +93,7 @@
 
     <!-- Job Detail Screen -->
     <string name="about_the_job">Sobre el empleo</string>
-    <string name="people_clicked_apply">%1$s \u00B7 %2$s \u00B7 67 personas hicieron clic en aplicar</string>
+    <string name="job_location_time_ago">%1$s \u00B7 %2$s</string>
     <string name="promoted_by_hirer">Promocionado por el empleador \u00B7 Respuestas gestionadas fuera de LinkedIn</string>
     <string name="remote_check">\u2713 Remoto</string>
     <string name="type_check">\u2713 %s</string>

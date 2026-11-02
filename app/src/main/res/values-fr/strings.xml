@@ -93,7 +93,7 @@
 
     <!-- Job Detail Screen -->
     <string name="about_the_job">\u00C0 propos de l\'emploi</string>
-    <string name="people_clicked_apply">%1$s \u00B7 %2$s \u00B7 67 personnes ont cliqu\u00E9 sur postuler</string>
+    <string name="job_location_time_ago">%1$s \u00B7 %2$s</string>
     <string name="promoted_by_hirer">Promu par l\'employeur \u00B7 R\u00E9ponses g\u00E9r\u00E9es hors LinkedIn</string>
     <string name="remote_check">\u2713 \u00C0 distance</string>
     <string name="type_check">\u2713 %s</string>

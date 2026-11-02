@@ -93,7 +93,7 @@
 
     <!-- Job Detail Screen -->
     <string name="about_the_job">\u5173\u4E8E\u8FD9\u4E2A\u804C\u4F4D</string>
-    <string name="people_clicked_apply">%1$s \u00B7 %2$s \u00B7 67\u4EBA\u70B9\u51FB\u4E86\u7533\u8BF7</string>
+    <string name="job_location_time_ago">%1$s \u00B7 %2$s</string>
     <string name="promoted_by_hirer">\u7531\u62DB\u8058\u65B9\u63A8\u5E7F \u00B7 \u56DE\u590D\u5728LinkedIn\u5916\u7BA1\u7406</string>
     <string name="remote_check">\u2713 \u8FDC\u7A0B</string>
     <string name="type_check">\u2713 %s</string>
